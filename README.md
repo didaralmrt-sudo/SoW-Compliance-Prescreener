@@ -5,7 +5,7 @@ PE6201 end-of-course project — Didaer Ailimulati, 4 October 2026.
 An analyst-support prototype that compares a synthetic wealth declaration with supporting documents and returns structured claims, document facts, evidence references, issues and a review action. It uses GPT-4o-mini through OpenRouter, deterministic evidence binding and mechanical validation. A non-AI keyword and money-extraction baseline is evaluated on the same cases.
 
 Start here: the submitted experiments are already saved. No API key or model call is needed to inspect the results. This is a coursework prototype, not a compliance approval system.
-Final results
+## Final results
 
 | Metric | Development baseline | Development AI | Holdout baseline | Holdout AI |
 |---|---:|---:|---:|---:|
@@ -25,15 +25,13 @@ The project has two original experiment notebooks and one submission entry point
 
 | Notebook | Purpose |
 |---|---|
-| `notebooks/SoW_v4_1_Executed.ipynb` | Export of the original v4.1 Colab run, retaining model outputs, validation details and recorded usage. |
-| `notebooks/SoW_Evaluation_Executed.ipynb` | Export of the original evaluation Colab run, retaining baseline/AI comparisons and development/holdout evaluation outputs. |
-| `notebooks/SoW_Submission_Colab.ipynb` | New, unexecuted entry point for inspecting saved results and optionally reproducing the workflow. Default execution makes no model calls. |
+| [SoW_V4_1_Executed.ipynb](SoW_V4_1_Executed.ipynb) | Export of the original v4.1 Colab run, retaining model outputs, validation details and recorded usage. |
+| [SoW_Baseline_Evaluation_Executed.ipynb](SoW_Baseline_Evaluation_Executed.ipynb) | Export of the original evaluation Colab run, retaining baseline/AI comparisons and development/holdout evaluation outputs. |
+| [SoW_Submission_Colab.ipynb](notebooks/SoW_Submission_Colab.ipynb) | New, unexecuted entry point for inspecting saved results and optionally reproducing the workflow. Default execution makes no model calls. |
 
-**Local packaging status:** the two `Executed` exports have not yet been added to this local package. Export them from the original Colab sessions with outputs retained and credentials removed, then upload them under the exact names above. Remove this status paragraph once both files are present in the GitHub repository.
+Reviewers do not need to rerun inference to inspect the submitted evidence. Start with the final results in this README and `reports/`, then inspect the two executed notebooks linked above. The authoritative final scores are the saved reports and `manual_decisions.json`; earlier or intermediate notebook outputs may differ. Raw responses remain in `saved_dev_ai/` and `results/`.
 
-Reviewers do not need to rerun inference to inspect the submitted evidence. Start with the final results in this README and `reports/`, then inspect the executed notebooks when available. The authoritative final scores are the saved reports and `manual_decisions.json`; earlier or intermediate notebook outputs may differ. Raw responses remain in `saved_dev_ai/` and `results/`.
-
-Rerunning an original experiment notebook can make chargeable API requests or recreate intermediate files. Viewing saved outputs does not require an API key. For controlled reproduction, follow the submission notebook instructions below.
+The two executed notebooks preserve their original code settings and historical outputs. Their paid-run switches remain enabled (`RUN_SINGLE=True`, `RUN_DEV_BATCH=True`, and `RUN_HOLDOUT=True`). **Do not use Run all merely to view the results:** executing these notebooks can make chargeable API requests when credentials are available, especially in a fresh runtime without the historical cache. Viewing saved outputs requires no API key and makes no model calls. The original evaluation notebook references the earlier setup ZIP and is provided primarily as a run record. For repository-based inspection and optional reproduction, use `notebooks/SoW_Submission_Colab.ipynb`, whose paid demonstration is disabled by default. Viewing saved outputs does not require an API key. For controlled reproduction, follow the submission notebook instructions below.
 
 ## Use in Google Colab — no local Python installation
 
@@ -45,11 +43,13 @@ Rerunning an original experiment notebook can make chargeable API requests or re
 
 The notebook is a new submission wrapper around the frozen files, not the notebook that originally generated the experiments. It uses readable code cells and no embedded encoded project payload. Core project modules use Python's standard library; Colab supplies the notebook display/upload utilities. During packaging, only static syntax, JSON, path and hash checks were performed; this wrapper has not been executed end to end in Colab.
 
- Repository map
+## Repository map
 
 ```text
 .
 ├── README.md                         # English entry point
+├── SoW_V4_1_Executed.ipynb            # Historical AI run with saved outputs
+├── SoW_Baseline_Evaluation_Executed.ipynb # Historical evaluation with saved outputs
 ├── sow.py                            # Frozen v4.1 AI pipeline and validation
 ├── baseline.py                       # Frozen non-AI keyword/money rules
 ├── evaluate.py                       # Shared evaluator and report generation
@@ -71,7 +71,7 @@ The notebook is a new submission wrapper around the frozen files, not the notebo
 
 Keep the source modules, `prompts/`, `data/` and `labels/` in these locations: moving them would break relative-path assumptions and frozen-manifest verification. Historical files such as `manual_decisions.previous.json` and `docs/archive/README_before_submission.md` are retained for provenance; the current README and final decisions take precedence for submission status.
 
- How the system works
+## How the system works
 
 ```text
 One declaration + supporting text, with document/line IDs
@@ -87,7 +87,7 @@ Analyst review; separate fixed-label evaluation
 
 Each short case fits directly in the prompt. There is no vector store, fine-tuning, autonomous agent or separate web front end. Evidence quotes attached by code must not be reported as independently generated citation accuracy. Unknown information is retained as unresolved; validation failures trigger review, but semantic errors can still pass mechanical checks.
 
- Documentation
+## Documentation
 
 - [Product: persona, input/output, architecture and boundaries](docs/PRODUCT.md)
 - [Data: provenance, splits and missing generation records](docs/DATA.md)
@@ -97,7 +97,7 @@ Each short case fits directly in the prompt. There is no vector store, fine-tuni
 - [Vendor sources and build-versus-buy notes](docs/Comparator_sources_and_build_buy.md)
 - [Packaging verification](docs/PACKAGING_CHECKS.json)
 
- Reproducibility and limitations
+## Reproducibility and limitations
 
 The frozen candidate was evaluated on a small synthetic holdout; it is not a blind third-party benchmark. The dataset had been inspected during preparation. No inference changes were made in this submission package. Fresh model responses can vary and must not replace the historical final evidence.
 
