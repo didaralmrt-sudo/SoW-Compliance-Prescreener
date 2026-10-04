@@ -19,7 +19,23 @@ Full-task results use fixed-rubric, assistant-assisted case reviews recorded in 
 
 The 15 selected AI responses cost **USD 0.0060306** in total (development: 0.0037278; holdout: 0.0023028), averaging USD 0.00040204 per case. Mean recorded request latency was 3.40 seconds for development and 4.26 seconds for holdout. These are historical response costs, excluding earlier debugging, engineering, infrastructure and analyst time. Baseline API cost was zero; CPU cost was not estimated.
 
- Use in Google Colab — no local Python installation
+## Notebook guide for reviewers
+
+The project has two original experiment notebooks and one submission entry point:
+
+| Notebook | Purpose |
+|---|---|
+| `notebooks/SoW_v4_1_Executed.ipynb` | Export of the original v4.1 Colab run, retaining model outputs, validation details and recorded usage. |
+| `notebooks/SoW_Evaluation_Executed.ipynb` | Export of the original evaluation Colab run, retaining baseline/AI comparisons and development/holdout evaluation outputs. |
+| `notebooks/SoW_Submission_Colab.ipynb` | New, unexecuted entry point for inspecting saved results and optionally reproducing the workflow. Default execution makes no model calls. |
+
+**Local packaging status:** the two `Executed` exports have not yet been added to this local package. Export them from the original Colab sessions with outputs retained and credentials removed, then upload them under the exact names above. Remove this status paragraph once both files are present in the GitHub repository.
+
+Reviewers do not need to rerun inference to inspect the submitted evidence. Start with the final results in this README and `reports/`, then inspect the executed notebooks when available. The authoritative final scores are the saved reports and `manual_decisions.json`; earlier or intermediate notebook outputs may differ. Raw responses remain in `saved_dev_ai/` and `results/`.
+
+Rerunning an original experiment notebook can make chargeable API requests or recreate intermediate files. Viewing saved outputs does not require an API key. For controlled reproduction, follow the submission notebook instructions below.
+
+## Use in Google Colab — no local Python installation
 
 1. Download this repository as a ZIP from GitHub (Code → Download ZIP), or use the supplied `SoW_GitHub_Submission.zip`.
 2. Download `notebooks/SoW_Submission_Colab.ipynb` from this repository and upload it using Colab → File → Upload notebook.
