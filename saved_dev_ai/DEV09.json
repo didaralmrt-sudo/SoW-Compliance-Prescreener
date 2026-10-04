@@ -1,0 +1,323 @@
+{
+  "case_id": "DEV09",
+  "requested_model": "openai/gpt-4o-mini",
+  "pipeline_version": "v4_1_evidence_binding",
+  "response_format": "json_schema_strict",
+  "run_id": "20261004T071420198216Z",
+  "request_fingerprint": "48e85b228f7a3932fa6ab9f072dfe42cab62f67fafd5b8670aa01d71e9803235",
+  "input_sha256": "10ce7bc53c1bf3ed31dcaf4a38e15c801b9852e423c007e1c88cee5ee55812fe",
+  "cache_reused": false,
+  "new_api_call": true,
+  "latency_seconds": 4.408912811999983,
+  "prompt_sha256": "8e97f1784dd5a57699f8fc5bf1622ae673ee6336730284fe875aa407214aea6a",
+  "provider_response": {
+    "id": "gen-1791098078-JWbBgmuzwD5Gw7RQyBMr",
+    "object": "chat.completion",
+    "created": 1791098078,
+    "model": "openai/gpt-4o-mini",
+    "provider": "Azure",
+    "system_fingerprint": "fp_99f88af1c5",
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"source_type\":\"mixed\",\"claims\":[{\"source_label\":\"基金赎回\",\"amount\":450000,\"currency\":\"USD\",\"amount_basis\":\"equity_paid_proceeds\",\"amount_evidence\":[{\"doc_id\":\"DEV09_DECL\",\"line_id\":\"L2\"}]},{\"source_label\":\"薪资收入\",\"amount\":240000,\"currency\":\"SGD\",\"amount_basis\":\"salary_net_total:2023-2024\",\"amount_evidence\":[{\"doc_id\":\"DEV09_DECL\",\"line_id\":\"L3\"}]}],\"supported_facts\":[{\"source_label\":\"基金赎回\",\"amount\":450000,\"currency\":\"USD\",\"amount_basis\":\"equity_paid_proceeds\",\"transaction_status\":\"completed\",\"amount_evidence\":[{\"doc_id\":\"DEV09_DOC1\",\"line_id\":\"L2\"}],\"status_evidence\":[{\"doc_id\":\"DEV09_DOC1\",\"line_id\":\"L3\"}]},{\"source_label\":\"薪资收入\",\"amount\":240000,\"currency\":\"SGD\",\"amount_basis\":\"salary_net_total:2023-2024\",\"transaction_status\":\"completed\",\"amount_evidence\":[{\"doc_id\":\"DEV09_DOC2\",\"line_id\":\"L2\"}],\"status_evidence\":[{\"doc_id\":\"DEV09_DOC2\",\"line_id\":\"L3\"}]}],\"review_action\":\"no_issue_detected\",\"issue_codes\":[],\"evidence\":[],\"calculations\":[],\"missing_information\":[]}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2501,
+      "completion_tokens": 282,
+      "total_tokens": 2783,
+      "cost": 0.00040035,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00040035,
+        "upstream_inference_prompt_cost": 0.00023115,
+        "upstream_inference_completions_cost": 0.0001692
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2501,
+    "completion_tokens": 282,
+    "total_tokens": 2783,
+    "cost": 0.00040035,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00040035,
+      "upstream_inference_prompt_cost": 0.00023115,
+      "upstream_inference_completions_cost": 0.0001692
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "actual_model": "openai/gpt-4o-mini",
+  "finish_reason": "stop",
+  "raw_output": "{\"source_type\":\"mixed\",\"claims\":[{\"source_label\":\"基金赎回\",\"amount\":450000,\"currency\":\"USD\",\"amount_basis\":\"equity_paid_proceeds\",\"amount_evidence\":[{\"doc_id\":\"DEV09_DECL\",\"line_id\":\"L2\"}]},{\"source_label\":\"薪资收入\",\"amount\":240000,\"currency\":\"SGD\",\"amount_basis\":\"salary_net_total:2023-2024\",\"amount_evidence\":[{\"doc_id\":\"DEV09_DECL\",\"line_id\":\"L3\"}]}],\"supported_facts\":[{\"source_label\":\"基金赎回\",\"amount\":450000,\"currency\":\"USD\",\"amount_basis\":\"equity_paid_proceeds\",\"transaction_status\":\"completed\",\"amount_evidence\":[{\"doc_id\":\"DEV09_DOC1\",\"line_id\":\"L2\"}],\"status_evidence\":[{\"doc_id\":\"DEV09_DOC1\",\"line_id\":\"L3\"}]},{\"source_label\":\"薪资收入\",\"amount\":240000,\"currency\":\"SGD\",\"amount_basis\":\"salary_net_total:2023-2024\",\"transaction_status\":\"completed\",\"amount_evidence\":[{\"doc_id\":\"DEV09_DOC2\",\"line_id\":\"L2\"}],\"status_evidence\":[{\"doc_id\":\"DEV09_DOC2\",\"line_id\":\"L3\"}]}],\"review_action\":\"no_issue_detected\",\"issue_codes\":[],\"evidence\":[],\"calculations\":[],\"missing_information\":[]}",
+  "raw_model_object": {
+    "source_type": "mixed",
+    "claims": [
+      {
+        "source_label": "基金赎回",
+        "amount": 450000,
+        "currency": "USD",
+        "amount_basis": "equity_paid_proceeds",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV09_DECL",
+            "line_id": "L2"
+          }
+        ]
+      },
+      {
+        "source_label": "薪资收入",
+        "amount": 240000,
+        "currency": "SGD",
+        "amount_basis": "salary_net_total:2023-2024",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV09_DECL",
+            "line_id": "L3"
+          }
+        ]
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "基金赎回",
+        "amount": 450000,
+        "currency": "USD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV09_DOC1",
+            "line_id": "L2"
+          }
+        ],
+        "status_evidence": [
+          {
+            "doc_id": "DEV09_DOC1",
+            "line_id": "L3"
+          }
+        ]
+      },
+      {
+        "source_label": "薪资收入",
+        "amount": 240000,
+        "currency": "SGD",
+        "amount_basis": "salary_net_total:2023-2024",
+        "transaction_status": "completed",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV09_DOC2",
+            "line_id": "L2"
+          }
+        ],
+        "status_evidence": [
+          {
+            "doc_id": "DEV09_DOC2",
+            "line_id": "L3"
+          }
+        ]
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [],
+    "calculations": [],
+    "missing_information": []
+  },
+  "candidate_output": {
+    "source_type": "mixed",
+    "claims": [
+      {
+        "source_label": "基金赎回",
+        "amount": 450000,
+        "currency": "USD",
+        "amount_basis": "equity_paid_proceeds"
+      },
+      {
+        "source_label": "薪资收入",
+        "amount": 240000,
+        "currency": "SGD",
+        "amount_basis": "salary_net_total:2023-2024"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "基金赎回",
+        "amount": 450000,
+        "currency": "USD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      },
+      {
+        "source_label": "薪资收入",
+        "amount": 240000,
+        "currency": "SGD",
+        "amount_basis": "salary_net_total:2023-2024",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV09_DECL",
+        "line_id": "L2",
+        "quote": "第一项是2025年5月收到的基金赎回总额USD 450,000，包含本金与收益。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV09_DECL",
+        "line_id": "L3",
+        "quote": "第二项是2023年至2024年已收取的税后累计薪资SGD 240,000。",
+        "supports_field": "claims[1].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L3",
+        "quote": "支付流水确认，USD 450,000于2025年5月16日记入顾若溪本人美元账户，到账状态为完成，无未付余额。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L3",
+        "quote": "各月支付流水确认，两年薪资均已记入顾若溪本人新元账户，相关支付全部完成，无拖欠余额。",
+        "supports_field": "supported_facts[1].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "evidence_binding": "Source text and field paths attached deterministically; raw_model_object unchanged",
+  "validated_output": {
+    "source_type": "mixed",
+    "claims": [
+      {
+        "source_label": "基金赎回",
+        "amount": 450000,
+        "currency": "USD",
+        "amount_basis": "equity_paid_proceeds"
+      },
+      {
+        "source_label": "薪资收入",
+        "amount": 240000,
+        "currency": "SGD",
+        "amount_basis": "salary_net_total:2023-2024"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "基金赎回",
+        "amount": 450000,
+        "currency": "USD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      },
+      {
+        "source_label": "薪资收入",
+        "amount": 240000,
+        "currency": "SGD",
+        "amount_basis": "salary_net_total:2023-2024",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV09_DECL",
+        "line_id": "L2",
+        "quote": "第一项是2025年5月收到的基金赎回总额USD 450,000，包含本金与收益。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV09_DECL",
+        "line_id": "L3",
+        "quote": "第二项是2023年至2024年已收取的税后累计薪资SGD 240,000。",
+        "supports_field": "claims[1].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L3",
+        "quote": "支付流水确认，USD 450,000于2025年5月16日记入顾若溪本人美元账户，到账状态为完成，无未付余额。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L3",
+        "quote": "各月支付流水确认，两年薪资均已记入顾若溪本人新元账户，相关支付全部完成，无拖欠余额。",
+        "supports_field": "supported_facts[1].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validation": {
+    "schema_ok": true,
+    "mechanical_checks_ok": true,
+    "errors": [],
+    "arithmetic_checks": [],
+    "normalization_events": [],
+    "comparison_candidates": [],
+    "injection_rule_evidence": [],
+    "forced_review": false,
+    "amount_matching_scope": "Only evidenced matching label/basis/currency pairs are numerical candidates. Differences trigger review but do not create confirmed mismatch labels. Period, ownership and semantic support require review.",
+    "limitations": "Verbatim quote presence and arithmetic do not prove semantic support. Human checks remain necessary; injection detector covers only listed patterns."
+  },
+  "status": "ok"
+}

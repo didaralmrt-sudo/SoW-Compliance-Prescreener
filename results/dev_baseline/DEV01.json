@@ -1,0 +1,177 @@
+{
+  "case_id": "DEV01",
+  "pipeline_version": "keyword_money_v1",
+  "status": "rule_output",
+  "candidate_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "equity_sale",
+        "amount": 2000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "equity_sale",
+        "amount": 8000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 2000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 2000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV01_DECL",
+        "line_id": "L3",
+        "quote": "按公司全部股权估值SGD 8,000,000计算，我取得并于2025年6月18日收到SGD 2,000,000。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC1",
+        "line_id": "L3",
+        "quote": "双方约定公司全部股权估值为SGD 8,000,000，本次林澄所售股权对价为SGD 2,000,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC1",
+        "line_id": "L3",
+        "quote": "双方约定公司全部股权估值为SGD 8,000,000，本次林澄所售股权对价为SGD 2,000,000。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV01_DOC1",
+        "line_id": "L3",
+        "quote": "双方约定公司全部股权估值为SGD 8,000,000，本次林澄所售股权对价为SGD 2,000,000。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC1",
+        "line_id": "L3",
+        "quote": "双方约定公司全部股权估值为SGD 8,000,000，本次林澄所售股权对价为SGD 2,000,000。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "DEV01_DOC2",
+        "line_id": "L3",
+        "quote": "结算账户记录显示，受让人支付的SGD 2,000,000已于当日全额记入林澄本人收款账户，状态为到账完成。",
+        "supports_field": "supported_facts[2].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC2",
+        "line_id": "L3",
+        "quote": "结算账户记录显示，受让人支付的SGD 2,000,000已于当日全额记入林澄本人收款账户，状态为到账完成。",
+        "supports_field": "supported_facts[2].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validated_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "equity_sale",
+        "amount": 2000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "equity_sale",
+        "amount": 8000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 2000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 2000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV01_DECL",
+        "line_id": "L3",
+        "quote": "按公司全部股权估值SGD 8,000,000计算，我取得并于2025年6月18日收到SGD 2,000,000。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC1",
+        "line_id": "L3",
+        "quote": "双方约定公司全部股权估值为SGD 8,000,000，本次林澄所售股权对价为SGD 2,000,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC1",
+        "line_id": "L3",
+        "quote": "双方约定公司全部股权估值为SGD 8,000,000，本次林澄所售股权对价为SGD 2,000,000。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV01_DOC1",
+        "line_id": "L3",
+        "quote": "双方约定公司全部股权估值为SGD 8,000,000，本次林澄所售股权对价为SGD 2,000,000。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC1",
+        "line_id": "L3",
+        "quote": "双方约定公司全部股权估值为SGD 8,000,000，本次林澄所售股权对价为SGD 2,000,000。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "DEV01_DOC2",
+        "line_id": "L3",
+        "quote": "结算账户记录显示，受让人支付的SGD 2,000,000已于当日全额记入林澄本人收款账户，状态为到账完成。",
+        "supports_field": "supported_facts[2].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC2",
+        "line_id": "L3",
+        "quote": "结算账户记录显示，受让人支付的SGD 2,000,000已于当日全额记入林澄本人收款账户，状态为到账完成。",
+        "supports_field": "supported_facts[2].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "latency_seconds": 0.0009713430000033441,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cost": 0
+  },
+  "cost_note": "No model API; CPU/runtime cost not estimated."
+}

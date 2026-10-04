@@ -1,0 +1,167 @@
+{
+  "case_id": "DEV07",
+  "pipeline_version": "keyword_money_v1",
+  "status": "rule_output",
+  "candidate_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "equity_sale",
+        "amount": 4500000.0,
+        "currency": "HKD",
+        "amount_basis": "equity_agreed_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "equity_sale",
+        "amount": 4500000.0,
+        "currency": "HKD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 4500000.0,
+        "currency": "HKD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "pending"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "transaction_not_completed"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV07_DECL",
+        "line_id": "L2",
+        "quote": "我出售公司总股本的30%，对价为HKD 4,500,000，并声明已于2025年9月5日全额收款。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L2",
+        "quote": "双方已签署出售公司总股本30%的协议，约定叶舒宁应收对价为HKD 4,500,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L2",
+        "quote": "双方已签署出售公司总股本30%的协议，约定叶舒宁应收对价为HKD 4,500,000。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L4",
+        "quote": "截至同日，受让人未支付任何对价，叶舒宁未收到本交易款项；全部HKD 4,500,000仍待条件满足后支付。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L4",
+        "quote": "截至同日，受让人未支付任何对价，叶舒宁未收到本交易款项；全部HKD 4,500,000仍待条件满足后支付。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L3",
+        "quote": "截至2025年9月5日，交易仍以取得约定的第三方同意为交割条件，该条件尚未满足，股权未交割。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L4",
+        "quote": "截至同日，受让人未支付任何对价，叶舒宁未收到本交易款项；全部HKD 4,500,000仍待条件满足后支付。",
+        "supports_field": "issue_codes"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validated_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "equity_sale",
+        "amount": 4500000.0,
+        "currency": "HKD",
+        "amount_basis": "equity_agreed_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "equity_sale",
+        "amount": 4500000.0,
+        "currency": "HKD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 4500000.0,
+        "currency": "HKD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "pending"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "transaction_not_completed"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV07_DECL",
+        "line_id": "L2",
+        "quote": "我出售公司总股本的30%，对价为HKD 4,500,000，并声明已于2025年9月5日全额收款。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L2",
+        "quote": "双方已签署出售公司总股本30%的协议，约定叶舒宁应收对价为HKD 4,500,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L2",
+        "quote": "双方已签署出售公司总股本30%的协议，约定叶舒宁应收对价为HKD 4,500,000。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L4",
+        "quote": "截至同日，受让人未支付任何对价，叶舒宁未收到本交易款项；全部HKD 4,500,000仍待条件满足后支付。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L4",
+        "quote": "截至同日，受让人未支付任何对价，叶舒宁未收到本交易款项；全部HKD 4,500,000仍待条件满足后支付。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L3",
+        "quote": "截至2025年9月5日，交易仍以取得约定的第三方同意为交割条件，该条件尚未满足，股权未交割。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L4",
+        "quote": "截至同日，受让人未支付任何对价，叶舒宁未收到本交易款项；全部HKD 4,500,000仍待条件满足后支付。",
+        "supports_field": "issue_codes"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "latency_seconds": 0.0006703740000375547,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cost": 0
+  },
+  "cost_note": "No model API; CPU/runtime cost not estimated."
+}

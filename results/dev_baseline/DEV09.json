@@ -1,0 +1,343 @@
+{
+  "case_id": "DEV09",
+  "pipeline_version": "keyword_money_v1",
+  "status": "rule_output",
+  "candidate_output": {
+    "source_type": "mixed",
+    "claims": [
+      {
+        "source_label": "investment",
+        "amount": 450000.0,
+        "currency": "USD",
+        "amount_basis": "redemption_total"
+      },
+      {
+        "source_label": "salary",
+        "amount": 240000.0,
+        "currency": "SGD",
+        "amount_basis": "salary_net_total"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "investment",
+        "amount": 450000.0,
+        "currency": "USD",
+        "amount_basis": "redemption_total",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "investment",
+        "amount": 400000.0,
+        "currency": "USD",
+        "amount_basis": "investment_principal",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "investment",
+        "amount": 50000.0,
+        "currency": "USD",
+        "amount_basis": "investment_net_gain",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "investment",
+        "amount": 450000.0,
+        "currency": "USD",
+        "amount_basis": "redemption_total",
+        "transaction_status": "completed"
+      },
+      {
+        "source_label": "salary",
+        "amount": 120000.0,
+        "currency": "SGD",
+        "amount_basis": "salary_net_total",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "investment",
+        "amount": 240000.0,
+        "currency": "SGD",
+        "amount_basis": "redemption_total",
+        "transaction_status": "unknown"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "amount_mismatch"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV09_DECL",
+        "line_id": "L2",
+        "quote": "第一项是2025年5月收到的基金赎回总额USD 450,000，包含本金与收益。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV09_DECL",
+        "line_id": "L3",
+        "quote": "第二项是2023年至2024年已收取的税后累计薪资SGD 240,000。",
+        "supports_field": "claims[1].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[2].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[2].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L3",
+        "quote": "支付流水确认，USD 450,000于2025年5月16日记入顾若溪本人美元账户，到账状态为完成，无未付余额。",
+        "supports_field": "supported_facts[3].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L3",
+        "quote": "支付流水确认，USD 450,000于2025年5月16日记入顾若溪本人美元账户，到账状态为完成，无未付余额。",
+        "supports_field": "supported_facts[3].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "supported_facts[4].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "supported_facts[4].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "supported_facts[5].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "supported_facts[5].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DECL",
+        "line_id": "L3",
+        "quote": "第二项是2023年至2024年已收取的税后累计薪资SGD 240,000。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "issue_codes"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validated_output": {
+    "source_type": "mixed",
+    "claims": [
+      {
+        "source_label": "investment",
+        "amount": 450000.0,
+        "currency": "USD",
+        "amount_basis": "redemption_total"
+      },
+      {
+        "source_label": "salary",
+        "amount": 240000.0,
+        "currency": "SGD",
+        "amount_basis": "salary_net_total"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "investment",
+        "amount": 450000.0,
+        "currency": "USD",
+        "amount_basis": "redemption_total",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "investment",
+        "amount": 400000.0,
+        "currency": "USD",
+        "amount_basis": "investment_principal",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "investment",
+        "amount": 50000.0,
+        "currency": "USD",
+        "amount_basis": "investment_net_gain",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "investment",
+        "amount": 450000.0,
+        "currency": "USD",
+        "amount_basis": "redemption_total",
+        "transaction_status": "completed"
+      },
+      {
+        "source_label": "salary",
+        "amount": 120000.0,
+        "currency": "SGD",
+        "amount_basis": "salary_net_total",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "investment",
+        "amount": 240000.0,
+        "currency": "SGD",
+        "amount_basis": "redemption_total",
+        "transaction_status": "unknown"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "amount_mismatch"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV09_DECL",
+        "line_id": "L2",
+        "quote": "第一项是2025年5月收到的基金赎回总额USD 450,000，包含本金与收益。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV09_DECL",
+        "line_id": "L3",
+        "quote": "第二项是2023年至2024年已收取的税后累计薪资SGD 240,000。",
+        "supports_field": "claims[1].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[2].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L2",
+        "quote": "本次赎回总额为USD 450,000，其中返还本金USD 400,000，投资净收益USD 50,000，金额已反映全部扣减。",
+        "supports_field": "supported_facts[2].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L3",
+        "quote": "支付流水确认，USD 450,000于2025年5月16日记入顾若溪本人美元账户，到账状态为完成，无未付余额。",
+        "supports_field": "supported_facts[3].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC1",
+        "line_id": "L3",
+        "quote": "支付流水确认，USD 450,000于2025年5月16日记入顾若溪本人美元账户，到账状态为完成，无未付余额。",
+        "supports_field": "supported_facts[3].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "supported_facts[4].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "supported_facts[4].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "supported_facts[5].amount"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "supported_facts[5].transaction_status"
+      },
+      {
+        "doc_id": "DEV09_DECL",
+        "line_id": "L3",
+        "quote": "第二项是2023年至2024年已收取的税后累计薪资SGD 240,000。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "DEV09_DOC2",
+        "line_id": "L2",
+        "quote": "2023年度税后薪资实付SGD 120,000，2024年度税后薪资实付SGD 120,000，两年累计SGD 240,000。",
+        "supports_field": "issue_codes"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "latency_seconds": 0.000872415000003457,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cost": 0
+  },
+  "cost_note": "No model API; CPU/runtime cost not estimated."
+}

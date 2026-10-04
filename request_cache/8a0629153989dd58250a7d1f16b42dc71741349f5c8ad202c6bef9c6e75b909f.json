@@ -1,0 +1,141 @@
+{
+  "case_id": "HOLD05",
+  "requested_model": "openai/gpt-4o-mini",
+  "pipeline_version": "v4_1_evidence_binding",
+  "response_format": "json_schema_strict",
+  "run_id": "20261004T075011236089Z",
+  "request_fingerprint": "8a0629153989dd58250a7d1f16b42dc71741349f5c8ad202c6bef9c6e75b909f",
+  "input_sha256": "014f9a1717dd36d89416fff74f81e425d22910689e414895807a5bb5e18222b1",
+  "cache_reused": false,
+  "new_api_call": true,
+  "latency_seconds": 0.7944247340001311,
+  "prompt_sha256": "8e97f1784dd5a57699f8fc5bf1622ae673ee6336730284fe875aa407214aea6a",
+  "provider_response": {
+    "id": "gen-1791100231-57xTSlSVqp2i862rqB35",
+    "object": "chat.completion",
+    "created": 1791100231,
+    "model": "openai/gpt-4o-mini",
+    "provider": "OpenAI",
+    "system_fingerprint": "fp_1638fe696a",
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"source_type\":\"unknown\",\"claims\":[],\"supported_facts\":[],\"review_action\":\"insufficient_input\",\"issue_codes\":[\"insufficient_information\"],\"evidence\":[],\"calculations\":[],\"missing_information\":[\"No usable wealth information provided.\"]}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1977,
+      "completion_tokens": 48,
+      "total_tokens": 2025,
+      "cost": 0.00018135,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018135,
+        "upstream_inference_prompt_cost": 0.00015255,
+        "upstream_inference_completions_cost": 2.88e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "usage": {
+    "prompt_tokens": 1977,
+    "completion_tokens": 48,
+    "total_tokens": 2025,
+    "cost": 0.00018135,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00018135,
+      "upstream_inference_prompt_cost": 0.00015255,
+      "upstream_inference_completions_cost": 2.88e-05
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "actual_model": "openai/gpt-4o-mini",
+  "finish_reason": "stop",
+  "raw_output": "{\"source_type\":\"unknown\",\"claims\":[],\"supported_facts\":[],\"review_action\":\"insufficient_input\",\"issue_codes\":[\"insufficient_information\"],\"evidence\":[],\"calculations\":[],\"missing_information\":[\"No usable wealth information provided.\"]}",
+  "raw_model_object": {
+    "source_type": "unknown",
+    "claims": [],
+    "supported_facts": [],
+    "review_action": "insufficient_input",
+    "issue_codes": [
+      "insufficient_information"
+    ],
+    "evidence": [],
+    "calculations": [],
+    "missing_information": [
+      "No usable wealth information provided."
+    ]
+  },
+  "candidate_output": {
+    "source_type": "unknown",
+    "claims": [],
+    "supported_facts": [],
+    "review_action": "insufficient_input",
+    "issue_codes": [
+      "insufficient_information"
+    ],
+    "evidence": [],
+    "calculations": [],
+    "missing_information": [
+      "No usable wealth information provided."
+    ]
+  },
+  "evidence_binding": "Source text and field paths attached deterministically; raw_model_object unchanged",
+  "validated_output": {
+    "source_type": "unknown",
+    "claims": [],
+    "supported_facts": [],
+    "review_action": "insufficient_input",
+    "issue_codes": [
+      "insufficient_information"
+    ],
+    "evidence": [],
+    "calculations": [],
+    "missing_information": [
+      "No usable wealth information provided."
+    ]
+  },
+  "validation": {
+    "schema_ok": true,
+    "mechanical_checks_ok": true,
+    "errors": [],
+    "arithmetic_checks": [],
+    "normalization_events": [],
+    "comparison_candidates": [],
+    "injection_rule_evidence": [],
+    "forced_review": false,
+    "amount_matching_scope": "Only evidenced matching label/basis/currency pairs are numerical candidates. Differences trigger review but do not create confirmed mismatch labels. Period, ownership and semantic support require review.",
+    "limitations": "Verbatim quote presence and arithmetic do not prove semantic support. Human checks remain necessary; injection detector covers only listed patterns."
+  },
+  "status": "ok"
+}

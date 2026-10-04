@@ -1,0 +1,691 @@
+{
+  "split": "dev",
+  "summary": {
+    "baseline": {
+      "cases": 10,
+      "action_matches": 8,
+      "source_type_matches": 8,
+      "issue_set_matches": 6,
+      "reference_integrity_passes": 10,
+      "review_required": 5,
+      "required_cases_referred": 4,
+      "normal_cases": 5,
+      "normal_cases_referred": 1,
+      "api_cost_usd": 0.0,
+      "cost_missing_cases": 0,
+      "mean_latency_seconds": 0.000768168500013644,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "human_decisions_completed": 10,
+      "full_task_pass_count": 1,
+      "full_task_accuracy": 0.1
+    },
+    "ai": {
+      "cases": 10,
+      "action_matches": 9,
+      "source_type_matches": 9,
+      "issue_set_matches": 9,
+      "reference_integrity_passes": 10,
+      "review_required": 5,
+      "required_cases_referred": 5,
+      "normal_cases": 5,
+      "normal_cases_referred": 1,
+      "api_cost_usd": 0.0037278,
+      "cost_missing_cases": 0,
+      "mean_latency_seconds": 3.397463336299995,
+      "prompt_tokens": 23352,
+      "completion_tokens": 2295,
+      "human_decisions_completed": 10,
+      "full_task_pass_count": 6,
+      "full_task_accuracy": 0.6
+    }
+  },
+  "cases": [
+    {
+      "split": "dev",
+      "system": "baseline",
+      "case_id": "DEV01",
+      "record_status": "rule_output",
+      "expected_action": "no_issue_detected",
+      "action": "no_issue_detected",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": false
+      },
+      "shared_evidence_audit": {
+        "entries": 7,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "缺少固定要求的股权比例计算；另将公司整体估值8000000标为股权约定对价，未清楚区分金额主体。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.0009713430000033441,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "baseline",
+      "case_id": "DEV02",
+      "record_status": "rule_output",
+      "expected_action": "no_issue_detected",
+      "action": "no_issue_detected",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 9,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "990000累计金额正确，但收款状态为unknown而非completed；未保留2022–2024累计期间，各年金额与合计口径也未区分。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.000662637999994331,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "baseline",
+      "case_id": "DEV03",
+      "record_status": "rule_output",
+      "expected_action": "no_issue_detected",
+      "action": "no_issue_detected",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 9,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "额外把1000000本金标为investment_net_gain，产生不正确的收益事实；不是仅因事实数组顺序不同而失败。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.0016157620000285533,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "baseline",
+      "case_id": "DEV04",
+      "record_status": "rule_output",
+      "expected_action": "no_issue_detected",
+      "action": "no_issue_detected",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 5,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "PASS",
+      "manual_reason": "2400000 HKD个人现金继承、完成到账及正常行动正确；分配安排的unknown与到账记录completed分别对应不同证据阶段。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.00044843099999525293,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "baseline",
+      "case_id": "DEV05",
+      "record_status": "rule_output",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": false,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 6,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "把单一赠与分成mixed，声明口径unspecified；未报告必需amount_mismatch及150000差额。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.0006535790000157249,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "baseline",
+      "case_id": "DEV06",
+      "record_status": "rule_output",
+      "expected_action": "human_review",
+      "action": "no_issue_detected",
+      "action_match": false,
+      "source_type_match": true,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": false
+      },
+      "shared_evidence_audit": {
+        "entries": 7,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "把客户声称已收的12000000标为约定对价，输出no_issue_detected；漏掉个人3000000与整体12000000的区别、两个必需问题码及比例计算。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.0007517029999917213,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "baseline",
+      "case_id": "DEV07",
+      "record_status": "rule_output",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 7,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "虽正确触发transaction_not_completed，但将客户已收款声明标为equity_agreed_proceeds，改变了声明的金融含义。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.0006703740000375547,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "baseline",
+      "case_id": "DEV08",
+      "record_status": "rule_output",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 1,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "缺文件、投资类型及转人工正确，但将现金分红错误标成redemption_total，金额口径不符合原文。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.0003894730000411073,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "baseline",
+      "case_id": "DEV09",
+      "record_status": "rule_output",
+      "expected_action": "no_issue_detected",
+      "action": "human_review",
+      "action_match": false,
+      "source_type_match": true,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 16,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "把240000 SGD薪资合计标成基金赎回，并将累计工资与年度工资比较，误报amount_mismatch、误转人工。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.000872415000003457,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "baseline",
+      "case_id": "DEV10",
+      "record_status": "rule_output",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": false,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 12,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "将注入行920000纳入财务支持事实，漏掉amount_mismatch，source_type错为mixed，且没有50000差额计算。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.0006459670000253936,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "ai",
+      "case_id": "DEV01",
+      "record_status": "validation_failed",
+      "expected_action": "no_issue_detected",
+      "action": "human_review",
+      "action_match": false,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": false
+      },
+      "shared_evidence_audit": {
+        "entries": 3,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "正常案例被转人工，且缺少8000000×25%=2000000的必需股权分配计算。",
+      "api_cost_usd": 0.0004824,
+      "prompt_tokens": 2568,
+      "completion_tokens": 162,
+      "latency_seconds": 1.6787184460000049,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": [
+        "Equity allocation context requires an evidenced allocation calculation"
+      ]
+    },
+    {
+      "split": "dev",
+      "system": "ai",
+      "case_id": "DEV02",
+      "record_status": "ok",
+      "expected_action": "no_issue_detected",
+      "action": "no_issue_detected",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 3,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "PASS",
+      "manual_reason": "990000 SGD、2022–2024税后累计薪资口径、completed及正常行动正确，引用能追溯到工资汇总和到账记录。",
+      "api_cost_usd": 0.00030285,
+      "prompt_tokens": 2323,
+      "completion_tokens": 164,
+      "latency_seconds": 1.8476383249999913,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "ai",
+      "case_id": "DEV03",
+      "record_status": "ok",
+      "expected_action": "no_issue_detected",
+      "action": "no_issue_detected",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 7,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "PASS",
+      "manual_reason": "正确区分180000净收益、1000000本金和1180000赎回总额，币种与正常行动正确；结合已引用DOC1 L3/L4可核验本金返还与收益到账。",
+      "api_cost_usd": 0.00037905,
+      "prompt_tokens": 2311,
+      "completion_tokens": 294,
+      "latency_seconds": 4.748872582999979,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "ai",
+      "case_id": "DEV04",
+      "record_status": "ok",
+      "expected_action": "no_issue_detected",
+      "action": "no_issue_detected",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 3,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "PASS",
+      "manual_reason": "2400000 HKD个人继承份额、completed和正常行动正确，引用分配及到账记录。",
+      "api_cost_usd": 0.00029685,
+      "prompt_tokens": 2319,
+      "completion_tokens": 155,
+      "latency_seconds": 1.7320322980000356,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "ai",
+      "case_id": "DEV05",
+      "record_status": "ok",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 5,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "PASS",
+      "manual_reason": "赠与类型、800000声明与650000实收、completed、amount_mismatch及150000差额正确；输出已引用DOC1 L3证明到账，单独status字段引用L1不够精确，另记引用绑定缺陷。",
+      "api_cost_usd": 0.0003606,
+      "prompt_tokens": 2296,
+      "completion_tokens": 267,
+      "latency_seconds": 2.414107658999967,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "ai",
+      "case_id": "DEV06",
+      "record_status": "validation_failed",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": false
+      },
+      "shared_evidence_audit": {
+        "entries": 5,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "金额差异9000000已识别，但缺ownership_proceeds_mismatch以及12000000×(15%/60%)=3000000的必需比例计算。",
+      "api_cost_usd": 0.0005103,
+      "prompt_tokens": 2322,
+      "completion_tokens": 270,
+      "latency_seconds": 4.6222202590000165,
+      "cache_reused": true,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": [
+        "Equity allocation context requires an evidenced allocation calculation"
+      ]
+    },
+    {
+      "split": "dev",
+      "system": "ai",
+      "case_id": "DEV07",
+      "record_status": "validation_failed",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 5,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "PASS",
+      "manual_reason": "保留已收款声明与待付款约定对价的区别，pending、transaction_not_completed及人工复核正确；issue引用DOC1 L4明确未付款。固定规则允许省略独立0收款事实；附加amount_mismatch按已收声明与明确未收款理解。",
+      "api_cost_usd": 0.0003231,
+      "prompt_tokens": 2306,
+      "completion_tokens": 202,
+      "latency_seconds": 3.525375650000001,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": [
+        "claims[0].amount: no evidenced comparable personal amount; review required"
+      ]
+    },
+    {
+      "split": "dev",
+      "system": "ai",
+      "case_id": "DEV08",
+      "record_status": "ok",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": false,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 1,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "声明明确是现金分红，source_type却为unknown；虽缺材料处理正确，仍未满足investment类型要求。",
+      "api_cost_usd": 0.0002319,
+      "prompt_tokens": 2094,
+      "completion_tokens": 103,
+      "latency_seconds": 2.3343411939999896,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "ai",
+      "case_id": "DEV09",
+      "record_status": "ok",
+      "expected_action": "no_issue_detected",
+      "action": "no_issue_detected",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 6,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "两项金额币种及正常行动正确，但把基金赎回标成equity_paid_proceeds；金额口径是必需的语义判断，不能仅凭数字一致通过。",
+      "api_cost_usd": 0.00040035,
+      "prompt_tokens": 2501,
+      "completion_tokens": 282,
+      "latency_seconds": 4.408912811999983,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": []
+    },
+    {
+      "split": "dev",
+      "system": "ai",
+      "case_id": "DEV10",
+      "record_status": "ok",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 9,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "PASS",
+      "manual_reason": "保留920000声明与870000实收，计算50000差额；同时报告amount_mismatch和prompt_injection，注入只作为问题证据。",
+      "api_cost_usd": 0.0004404,
+      "prompt_tokens": 2312,
+      "completion_tokens": 396,
+      "latency_seconds": 6.662414136999985,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": []
+    }
+  ]
+}

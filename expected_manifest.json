@@ -1,0 +1,18 @@
+{
+  "model": "openai/gpt-4o-mini",
+  "ai_version": "v4_1_evidence_binding",
+  "baseline_version": "keyword_money_v1",
+  "files": {
+    "sow.py": "cd82264d0fefcff10b1281acb590a1268c7d1a9282feb687191999dbdefe95d0",
+    "prompts/system.txt": "8e97f1784dd5a57699f8fc5bf1622ae673ee6336730284fe875aa407214aea6a",
+    "baseline.py": "5ce88c4cf49da916f93881afcbaf0be11cfb2652896589d2910e3a2c92ce5df8",
+    "evaluate.py": "62f4f7786b636af0fe4ee56187ef45aaa4c995505efcc105ac71907528ce12c7",
+    "checks.py": "8eebb48adfc3112fb51ed84277ec59f93b238a4827a416c378f2a281780f1ba3",
+    "data/dev_inputs.json": "3e3dd959a7c4adb3614397ec0cc0315df1b2a67763ca296b33b19e7496571443",
+    "data/holdout_inputs.json": "89f09f03a002fa9b83264a8a03cbff8808ee3d29e55f55b2c7152ac1644c713b",
+    "labels/dev_ground_truth.json": "b9196759364dfdcc26de0f81bbd52e2b9cde15f57fd8c687d19bc1aa80351467",
+    "labels/holdout_ground_truth.json": "dd697925f0fe1089a405202753b30b0795144a982f012da7c9640cf68d26153a"
+  },
+  "saved_dev_run_id": "20261004T071420198216Z",
+  "notes": "Candidate frozen; no performance claim. Authoring used static checks only."
+}

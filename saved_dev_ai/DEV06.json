@@ -1,0 +1,359 @@
+{
+  "case_id": "DEV06",
+  "requested_model": "openai/gpt-4o-mini",
+  "pipeline_version": "v4_1_evidence_binding",
+  "response_format": "json_schema_strict",
+  "run_id": "20261004T071420198216Z",
+  "request_fingerprint": "8d0c0360f5af54f5338754383df8d0b026bb3224cdf1a57219dc784f097a5d61",
+  "input_sha256": "ed9418e582c73c8225f2d6ec370db3579a993142f8a9de607f045617158b3c17",
+  "cache_reused": true,
+  "new_api_call": false,
+  "latency_seconds": 4.6222202590000165,
+  "prompt_sha256": "8e97f1784dd5a57699f8fc5bf1622ae673ee6336730284fe875aa407214aea6a",
+  "provider_response": {
+    "id": "gen-1791098045-wi8B2iqpuhjSeXnjc9D9",
+    "object": "chat.completion",
+    "created": 1791098045,
+    "model": "openai/gpt-4o-mini",
+    "provider": "Azure",
+    "system_fingerprint": "fp_99f88af1c5",
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"source_type\":\"equity_sale\",\"claims\":[{\"source_label\":\"股权出售\",\"amount\":12000000,\"currency\":\"SGD\",\"amount_basis\":\"equity_paid_proceeds\",\"amount_evidence\":[{\"doc_id\":\"DEV06_DECL\",\"line_id\":\"L3\"}]}],\"supported_facts\":[{\"source_label\":\"股权出售\",\"amount\":3000000,\"currency\":\"SGD\",\"amount_basis\":\"equity_paid_proceeds\",\"transaction_status\":\"completed\",\"amount_evidence\":[{\"doc_id\":\"DEV06_DOC1\",\"line_id\":\"L4\"}],\"status_evidence\":[{\"doc_id\":\"DEV06_DOC1\",\"line_id\":\"L4\"}]}],\"review_action\":\"human_review\",\"issue_codes\":[\"amount_mismatch\"],\"evidence\":[{\"supports_field\":\"issue_codes\",\"doc_id\":\"DEV06_DECL\",\"line_id\":\"L3\"},{\"supports_field\":\"issue_codes\",\"doc_id\":\"DEV06_DOC1\",\"line_id\":\"L4\"}],\"calculations\":[{\"operation\":\"subtract\",\"operands\":[12000000,3000000],\"result\":null,\"currency\":\"SGD\",\"purpose\":\"amount_difference\",\"target_field\":null,\"evidence_refs\":[{\"doc_id\":\"DEV06_DECL\",\"line_id\":\"L3\"},{\"doc_id\":\"DEV06_DOC1\",\"line_id\":\"L4\"}]}],\"missing_information\":[]}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2322,
+      "completion_tokens": 270,
+      "total_tokens": 2592,
+      "cost": 0.0005103,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0005103,
+        "upstream_inference_prompt_cost": 0.0003483,
+        "upstream_inference_completions_cost": 0.000162
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2322,
+    "completion_tokens": 270,
+    "total_tokens": 2592,
+    "cost": 0.0005103,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0005103,
+      "upstream_inference_prompt_cost": 0.0003483,
+      "upstream_inference_completions_cost": 0.000162
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "actual_model": "openai/gpt-4o-mini",
+  "finish_reason": "stop",
+  "raw_output": "{\"source_type\":\"equity_sale\",\"claims\":[{\"source_label\":\"股权出售\",\"amount\":12000000,\"currency\":\"SGD\",\"amount_basis\":\"equity_paid_proceeds\",\"amount_evidence\":[{\"doc_id\":\"DEV06_DECL\",\"line_id\":\"L3\"}]}],\"supported_facts\":[{\"source_label\":\"股权出售\",\"amount\":3000000,\"currency\":\"SGD\",\"amount_basis\":\"equity_paid_proceeds\",\"transaction_status\":\"completed\",\"amount_evidence\":[{\"doc_id\":\"DEV06_DOC1\",\"line_id\":\"L4\"}],\"status_evidence\":[{\"doc_id\":\"DEV06_DOC1\",\"line_id\":\"L4\"}]}],\"review_action\":\"human_review\",\"issue_codes\":[\"amount_mismatch\"],\"evidence\":[{\"supports_field\":\"issue_codes\",\"doc_id\":\"DEV06_DECL\",\"line_id\":\"L3\"},{\"supports_field\":\"issue_codes\",\"doc_id\":\"DEV06_DOC1\",\"line_id\":\"L4\"}],\"calculations\":[{\"operation\":\"subtract\",\"operands\":[12000000,3000000],\"result\":null,\"currency\":\"SGD\",\"purpose\":\"amount_difference\",\"target_field\":null,\"evidence_refs\":[{\"doc_id\":\"DEV06_DECL\",\"line_id\":\"L3\"},{\"doc_id\":\"DEV06_DOC1\",\"line_id\":\"L4\"}]}],\"missing_information\":[]}",
+  "raw_model_object": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "股权出售",
+        "amount": 12000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV06_DECL",
+            "line_id": "L3"
+          }
+        ]
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "股权出售",
+        "amount": 3000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV06_DOC1",
+            "line_id": "L4"
+          }
+        ],
+        "status_evidence": [
+          {
+            "doc_id": "DEV06_DOC1",
+            "line_id": "L4"
+          }
+        ]
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "amount_mismatch"
+    ],
+    "evidence": [
+      {
+        "supports_field": "issue_codes",
+        "doc_id": "DEV06_DECL",
+        "line_id": "L3"
+      },
+      {
+        "supports_field": "issue_codes",
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4"
+      }
+    ],
+    "calculations": [
+      {
+        "operation": "subtract",
+        "operands": [
+          12000000,
+          3000000
+        ],
+        "result": null,
+        "currency": "SGD",
+        "purpose": "amount_difference",
+        "target_field": null,
+        "evidence_refs": [
+          {
+            "doc_id": "DEV06_DECL",
+            "line_id": "L3"
+          },
+          {
+            "doc_id": "DEV06_DOC1",
+            "line_id": "L4"
+          }
+        ]
+      }
+    ],
+    "missing_information": []
+  },
+  "candidate_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "股权出售",
+        "amount": 12000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "股权出售",
+        "amount": 3000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "amount_mismatch"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV06_DECL",
+        "line_id": "L3",
+        "quote": "本次交易价为SGD 12,000,000，我将这笔金额申报为本人出售股权已经收到的所得。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "DEV06_DECL",
+        "line_id": "L3",
+        "quote": "本次交易价为SGD 12,000,000，我将这笔金额申报为本人出售股权已经收到的所得。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[0].transaction_status"
+      }
+    ],
+    "calculations": [
+      {
+        "operation": "subtract",
+        "operands": [
+          12000000,
+          3000000
+        ],
+        "result": null,
+        "currency": "SGD",
+        "purpose": "amount_difference",
+        "target_field": null,
+        "evidence_refs": [
+          {
+            "doc_id": "DEV06_DECL",
+            "line_id": "L3",
+            "quote": "本次交易价为SGD 12,000,000，我将这笔金额申报为本人出售股权已经收到的所得。"
+          },
+          {
+            "doc_id": "DEV06_DOC1",
+            "line_id": "L4",
+            "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。"
+          }
+        ]
+      }
+    ],
+    "missing_information": []
+  },
+  "evidence_binding": "Source text and field paths attached deterministically; raw_model_object unchanged",
+  "validated_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "股权出售",
+        "amount": 12000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "股权出售",
+        "amount": 3000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "amount_mismatch"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV06_DECL",
+        "line_id": "L3",
+        "quote": "本次交易价为SGD 12,000,000，我将这笔金额申报为本人出售股权已经收到的所得。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "DEV06_DECL",
+        "line_id": "L3",
+        "quote": "本次交易价为SGD 12,000,000，我将这笔金额申报为本人出售股权已经收到的所得。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[0].transaction_status"
+      }
+    ],
+    "calculations": [
+      {
+        "operation": "subtract",
+        "operands": [
+          12000000,
+          3000000
+        ],
+        "result": 9000000.0,
+        "currency": "SGD",
+        "purpose": "amount_difference",
+        "target_field": null,
+        "evidence_refs": [
+          {
+            "doc_id": "DEV06_DECL",
+            "line_id": "L3",
+            "quote": "本次交易价为SGD 12,000,000，我将这笔金额申报为本人出售股权已经收到的所得。"
+          },
+          {
+            "doc_id": "DEV06_DOC1",
+            "line_id": "L4",
+            "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。"
+          }
+        ]
+      }
+    ],
+    "missing_information": []
+  },
+  "validation": {
+    "schema_ok": true,
+    "mechanical_checks_ok": false,
+    "errors": [
+      "Equity allocation context requires an evidenced allocation calculation"
+    ],
+    "arithmetic_checks": [
+      {
+        "calculation": 0,
+        "python_result": 9000000.0,
+        "arithmetic_verified": true,
+        "semantic_operand_relation": "requires_human_check"
+      }
+    ],
+    "normalization_events": [],
+    "comparison_candidates": [
+      {
+        "claim_index": 0,
+        "fact_index": 0,
+        "numeric_difference": 9000000.0,
+        "currency": "SGD",
+        "semantic_comparability": "not_proven_by_field_equality"
+      }
+    ],
+    "injection_rule_evidence": [],
+    "forced_review": true,
+    "amount_matching_scope": "Only evidenced matching label/basis/currency pairs are numerical candidates. Differences trigger review but do not create confirmed mismatch labels. Period, ownership and semantic support require review.",
+    "limitations": "Verbatim quote presence and arithmetic do not prove semantic support. Human checks remain necessary; injection detector covers only listed patterns."
+  },
+  "status": "validation_failed",
+  "reused_from_run_id": "20261004T071405439001Z"
+}

@@ -1,0 +1,275 @@
+{
+  "case_id": "DEV07",
+  "requested_model": "openai/gpt-4o-mini",
+  "pipeline_version": "v4_1_evidence_binding",
+  "response_format": "json_schema_strict",
+  "run_id": "20261004T071420198216Z",
+  "request_fingerprint": "1d7eda924aaf1a73b0e7db348b49b6daafc84d4a75740001e1ba07bddcab890b",
+  "input_sha256": "0eacd764219151bfd61515b4511f7f9f4b56f39aa14d6e3e68d8f8f13633b000",
+  "cache_reused": false,
+  "new_api_call": true,
+  "latency_seconds": 3.525375650000001,
+  "prompt_sha256": "8e97f1784dd5a57699f8fc5bf1622ae673ee6336730284fe875aa407214aea6a",
+  "provider_response": {
+    "id": "gen-1791098072-aTWWw8lKU0X7gXNhPJ48",
+    "object": "chat.completion",
+    "created": 1791098072,
+    "model": "openai/gpt-4o-mini",
+    "provider": "Azure",
+    "system_fingerprint": "fp_99f88af1c5",
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"source_type\":\"equity_sale\",\"claims\":[{\"source_label\":\"股权出售\",\"amount\":4500000,\"currency\":\"HKD\",\"amount_basis\":\"equity_paid_proceeds\",\"amount_evidence\":[{\"doc_id\":\"DEV07_DECL\",\"line_id\":\"L2\"}]}],\"supported_facts\":[{\"source_label\":\"股权出售\",\"amount\":4500000,\"currency\":\"HKD\",\"amount_basis\":\"equity_agreed_proceeds\",\"transaction_status\":\"pending\",\"amount_evidence\":[{\"doc_id\":\"DEV07_DOC1\",\"line_id\":\"L2\"}],\"status_evidence\":[{\"doc_id\":\"DEV07_DOC1\",\"line_id\":\"L3\"},{\"doc_id\":\"DEV07_DOC1\",\"line_id\":\"L4\"}]}],\"review_action\":\"human_review\",\"issue_codes\":[\"transaction_not_completed\",\"amount_mismatch\"],\"evidence\":[{\"supports_field\":\"issue_codes\",\"doc_id\":\"DEV07_DOC1\",\"line_id\":\"L4\"}],\"calculations\":[],\"missing_information\":[] }",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2306,
+      "completion_tokens": 202,
+      "total_tokens": 2508,
+      "cost": 0.0003231,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003231,
+        "upstream_inference_prompt_cost": 0.0002019,
+        "upstream_inference_completions_cost": 0.0001212
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2306,
+    "completion_tokens": 202,
+    "total_tokens": 2508,
+    "cost": 0.0003231,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0003231,
+      "upstream_inference_prompt_cost": 0.0002019,
+      "upstream_inference_completions_cost": 0.0001212
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "actual_model": "openai/gpt-4o-mini",
+  "finish_reason": "stop",
+  "raw_output": "{\"source_type\":\"equity_sale\",\"claims\":[{\"source_label\":\"股权出售\",\"amount\":4500000,\"currency\":\"HKD\",\"amount_basis\":\"equity_paid_proceeds\",\"amount_evidence\":[{\"doc_id\":\"DEV07_DECL\",\"line_id\":\"L2\"}]}],\"supported_facts\":[{\"source_label\":\"股权出售\",\"amount\":4500000,\"currency\":\"HKD\",\"amount_basis\":\"equity_agreed_proceeds\",\"transaction_status\":\"pending\",\"amount_evidence\":[{\"doc_id\":\"DEV07_DOC1\",\"line_id\":\"L2\"}],\"status_evidence\":[{\"doc_id\":\"DEV07_DOC1\",\"line_id\":\"L3\"},{\"doc_id\":\"DEV07_DOC1\",\"line_id\":\"L4\"}]}],\"review_action\":\"human_review\",\"issue_codes\":[\"transaction_not_completed\",\"amount_mismatch\"],\"evidence\":[{\"supports_field\":\"issue_codes\",\"doc_id\":\"DEV07_DOC1\",\"line_id\":\"L4\"}],\"calculations\":[],\"missing_information\":[] }",
+  "raw_model_object": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "股权出售",
+        "amount": 4500000,
+        "currency": "HKD",
+        "amount_basis": "equity_paid_proceeds",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV07_DECL",
+            "line_id": "L2"
+          }
+        ]
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "股权出售",
+        "amount": 4500000,
+        "currency": "HKD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "pending",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV07_DOC1",
+            "line_id": "L2"
+          }
+        ],
+        "status_evidence": [
+          {
+            "doc_id": "DEV07_DOC1",
+            "line_id": "L3"
+          },
+          {
+            "doc_id": "DEV07_DOC1",
+            "line_id": "L4"
+          }
+        ]
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "transaction_not_completed",
+      "amount_mismatch"
+    ],
+    "evidence": [
+      {
+        "supports_field": "issue_codes",
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L4"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "candidate_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "股权出售",
+        "amount": 4500000,
+        "currency": "HKD",
+        "amount_basis": "equity_paid_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "股权出售",
+        "amount": 4500000,
+        "currency": "HKD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "pending"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "transaction_not_completed",
+      "amount_mismatch"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L4",
+        "quote": "截至同日，受让人未支付任何对价，叶舒宁未收到本交易款项；全部HKD 4,500,000仍待条件满足后支付。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "DEV07_DECL",
+        "line_id": "L2",
+        "quote": "我出售公司总股本的30%，对价为HKD 4,500,000，并声明已于2025年9月5日全额收款。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L2",
+        "quote": "双方已签署出售公司总股本30%的协议，约定叶舒宁应收对价为HKD 4,500,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L3",
+        "quote": "截至2025年9月5日，交易仍以取得约定的第三方同意为交割条件，该条件尚未满足，股权未交割。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L4",
+        "quote": "截至同日，受让人未支付任何对价，叶舒宁未收到本交易款项；全部HKD 4,500,000仍待条件满足后支付。",
+        "supports_field": "supported_facts[0].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "evidence_binding": "Source text and field paths attached deterministically; raw_model_object unchanged",
+  "validated_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "股权出售",
+        "amount": 4500000,
+        "currency": "HKD",
+        "amount_basis": "equity_paid_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "股权出售",
+        "amount": 4500000,
+        "currency": "HKD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "pending"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "transaction_not_completed",
+      "amount_mismatch"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L4",
+        "quote": "截至同日，受让人未支付任何对价，叶舒宁未收到本交易款项；全部HKD 4,500,000仍待条件满足后支付。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "DEV07_DECL",
+        "line_id": "L2",
+        "quote": "我出售公司总股本的30%，对价为HKD 4,500,000，并声明已于2025年9月5日全额收款。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L2",
+        "quote": "双方已签署出售公司总股本30%的协议，约定叶舒宁应收对价为HKD 4,500,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L3",
+        "quote": "截至2025年9月5日，交易仍以取得约定的第三方同意为交割条件，该条件尚未满足，股权未交割。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV07_DOC1",
+        "line_id": "L4",
+        "quote": "截至同日，受让人未支付任何对价，叶舒宁未收到本交易款项；全部HKD 4,500,000仍待条件满足后支付。",
+        "supports_field": "supported_facts[0].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validation": {
+    "schema_ok": true,
+    "mechanical_checks_ok": false,
+    "errors": [
+      "claims[0].amount: no evidenced comparable personal amount; review required"
+    ],
+    "arithmetic_checks": [],
+    "normalization_events": [],
+    "comparison_candidates": [],
+    "injection_rule_evidence": [],
+    "forced_review": true,
+    "amount_matching_scope": "Only evidenced matching label/basis/currency pairs are numerical candidates. Differences trigger review but do not create confirmed mismatch labels. Period, ownership and semantic support require review.",
+    "limitations": "Verbatim quote presence and arithmetic do not prove semantic support. Human checks remain necessary; injection detector covers only listed patterns."
+  },
+  "status": "validation_failed"
+}

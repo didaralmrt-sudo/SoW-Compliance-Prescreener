@@ -1,0 +1,139 @@
+{
+  "case_id": "DEV04",
+  "pipeline_version": "keyword_money_v1",
+  "status": "rule_output",
+  "candidate_output": {
+    "source_type": "inheritance",
+    "claims": [
+      {
+        "source_label": "inheritance",
+        "amount": 2400000.0,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "inheritance",
+        "amount": 2400000.0,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "inheritance",
+        "amount": 2400000.0,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV04_DECL",
+        "line_id": "L2",
+        "quote": "遗产管理人分配给我的现金为HKD 2,400,000，并已于2025年2月21日存入本人账户。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L2",
+        "quote": "根据已确认的分配安排，受益人周岚获分配现金HKD 2,400,000，此金额为其个人现金份额，不是全部遗产估值。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L2",
+        "quote": "根据已确认的分配安排，受益人周岚获分配现金HKD 2,400,000，此金额为其个人现金份额，不是全部遗产估值。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L3",
+        "quote": "遗产专户支付流水确认，HKD 2,400,000已于2025年2月21日全额记入周岚本人账户，支付状态为完成。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L3",
+        "quote": "遗产专户支付流水确认，HKD 2,400,000已于2025年2月21日全额记入周岚本人账户，支付状态为完成。",
+        "supports_field": "supported_facts[1].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validated_output": {
+    "source_type": "inheritance",
+    "claims": [
+      {
+        "source_label": "inheritance",
+        "amount": 2400000.0,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "inheritance",
+        "amount": 2400000.0,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "inheritance",
+        "amount": 2400000.0,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV04_DECL",
+        "line_id": "L2",
+        "quote": "遗产管理人分配给我的现金为HKD 2,400,000，并已于2025年2月21日存入本人账户。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L2",
+        "quote": "根据已确认的分配安排，受益人周岚获分配现金HKD 2,400,000，此金额为其个人现金份额，不是全部遗产估值。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L2",
+        "quote": "根据已确认的分配安排，受益人周岚获分配现金HKD 2,400,000，此金额为其个人现金份额，不是全部遗产估值。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L3",
+        "quote": "遗产专户支付流水确认，HKD 2,400,000已于2025年2月21日全额记入周岚本人账户，支付状态为完成。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L3",
+        "quote": "遗产专户支付流水确认，HKD 2,400,000已于2025年2月21日全额记入周岚本人账户，支付状态为完成。",
+        "supports_field": "supported_facts[1].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "latency_seconds": 0.00044843099999525293,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cost": 0
+  },
+  "cost_note": "No model API; CPU/runtime cost not estimated."
+}

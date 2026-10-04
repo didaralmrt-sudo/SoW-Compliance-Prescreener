@@ -1,0 +1,232 @@
+{
+  "case_id": "DEV01",
+  "requested_model": "openai/gpt-4o-mini",
+  "pipeline_version": "v4_1_evidence_binding",
+  "response_format": "json_schema_strict",
+  "run_id": "20261004T071420198216Z",
+  "request_fingerprint": "320a9e620a6ba02d32a03e2f23e24737c7b38e6a074aa9e6c05d5e4d131d90e0",
+  "input_sha256": "4a6014c8264c0b21e4098ff777bfffd4488ec2dea8c2ecb0dae9a62cd1f185ad",
+  "cache_reused": false,
+  "new_api_call": true,
+  "latency_seconds": 1.6787184460000049,
+  "prompt_sha256": "8e97f1784dd5a57699f8fc5bf1622ae673ee6336730284fe875aa407214aea6a",
+  "provider_response": {
+    "id": "gen-1791098060-ObLeo3XTgxs5jVm3RsUS",
+    "object": "chat.completion",
+    "created": 1791098060,
+    "model": "openai/gpt-4o-mini",
+    "provider": "OpenAI",
+    "system_fingerprint": "fp_1638fe696a",
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"source_type\":\"equity_sale\",\"claims\":[{\"source_label\":\"股权转让\",\"amount\":2000000,\"currency\":\"SGD\",\"amount_basis\":\"equity_paid_proceeds\",\"amount_evidence\":[{\"doc_id\":\"DEV01_DECL\",\"line_id\":\"L3\"}]}],\"supported_facts\":[{\"source_label\":\"股权转让\",\"amount\":2000000,\"currency\":\"SGD\",\"amount_basis\":\"equity_paid_proceeds\",\"transaction_status\":\"completed\",\"amount_evidence\":[{\"doc_id\":\"DEV01_DOC2\",\"line_id\":\"L3\"}],\"status_evidence\":[{\"doc_id\":\"DEV01_DOC2\",\"line_id\":\"L3\"}]}],\"review_action\":\"no_issue_detected\",\"issue_codes\":[],\"evidence\":[],\"calculations\":[],\"missing_information\":[]}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2568,
+      "completion_tokens": 162,
+      "total_tokens": 2730,
+      "cost": 0.0004824,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0004824,
+        "upstream_inference_prompt_cost": 0.0003852,
+        "upstream_inference_completions_cost": 9.72e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2568,
+    "completion_tokens": 162,
+    "total_tokens": 2730,
+    "cost": 0.0004824,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0004824,
+      "upstream_inference_prompt_cost": 0.0003852,
+      "upstream_inference_completions_cost": 9.72e-05
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "actual_model": "openai/gpt-4o-mini",
+  "finish_reason": "stop",
+  "raw_output": "{\"source_type\":\"equity_sale\",\"claims\":[{\"source_label\":\"股权转让\",\"amount\":2000000,\"currency\":\"SGD\",\"amount_basis\":\"equity_paid_proceeds\",\"amount_evidence\":[{\"doc_id\":\"DEV01_DECL\",\"line_id\":\"L3\"}]}],\"supported_facts\":[{\"source_label\":\"股权转让\",\"amount\":2000000,\"currency\":\"SGD\",\"amount_basis\":\"equity_paid_proceeds\",\"transaction_status\":\"completed\",\"amount_evidence\":[{\"doc_id\":\"DEV01_DOC2\",\"line_id\":\"L3\"}],\"status_evidence\":[{\"doc_id\":\"DEV01_DOC2\",\"line_id\":\"L3\"}]}],\"review_action\":\"no_issue_detected\",\"issue_codes\":[],\"evidence\":[],\"calculations\":[],\"missing_information\":[]}",
+  "raw_model_object": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "股权转让",
+        "amount": 2000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV01_DECL",
+            "line_id": "L3"
+          }
+        ]
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "股权转让",
+        "amount": 2000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV01_DOC2",
+            "line_id": "L3"
+          }
+        ],
+        "status_evidence": [
+          {
+            "doc_id": "DEV01_DOC2",
+            "line_id": "L3"
+          }
+        ]
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [],
+    "calculations": [],
+    "missing_information": []
+  },
+  "candidate_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "股权转让",
+        "amount": 2000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "股权转让",
+        "amount": 2000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV01_DECL",
+        "line_id": "L3",
+        "quote": "按公司全部股权估值SGD 8,000,000计算，我取得并于2025年6月18日收到SGD 2,000,000。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC2",
+        "line_id": "L3",
+        "quote": "结算账户记录显示，受让人支付的SGD 2,000,000已于当日全额记入林澄本人收款账户，状态为到账完成。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC2",
+        "line_id": "L3",
+        "quote": "结算账户记录显示，受让人支付的SGD 2,000,000已于当日全额记入林澄本人收款账户，状态为到账完成。",
+        "supports_field": "supported_facts[0].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "evidence_binding": "Source text and field paths attached deterministically; raw_model_object unchanged",
+  "validated_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "股权转让",
+        "amount": 2000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "股权转让",
+        "amount": 2000000,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV01_DECL",
+        "line_id": "L3",
+        "quote": "按公司全部股权估值SGD 8,000,000计算，我取得并于2025年6月18日收到SGD 2,000,000。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC2",
+        "line_id": "L3",
+        "quote": "结算账户记录显示，受让人支付的SGD 2,000,000已于当日全额记入林澄本人收款账户，状态为到账完成。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV01_DOC2",
+        "line_id": "L3",
+        "quote": "结算账户记录显示，受让人支付的SGD 2,000,000已于当日全额记入林澄本人收款账户，状态为到账完成。",
+        "supports_field": "supported_facts[0].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validation": {
+    "schema_ok": true,
+    "mechanical_checks_ok": false,
+    "errors": [
+      "Equity allocation context requires an evidenced allocation calculation"
+    ],
+    "arithmetic_checks": [],
+    "normalization_events": [],
+    "comparison_candidates": [],
+    "injection_rule_evidence": [],
+    "forced_review": true,
+    "amount_matching_scope": "Only evidenced matching label/basis/currency pairs are numerical candidates. Differences trigger review but do not create confirmed mismatch labels. Period, ownership and semantic support require review.",
+    "limitations": "Verbatim quote presence and arithmetic do not prove semantic support. Human checks remain necessary; injection detector covers only listed patterns."
+  },
+  "status": "validation_failed"
+}

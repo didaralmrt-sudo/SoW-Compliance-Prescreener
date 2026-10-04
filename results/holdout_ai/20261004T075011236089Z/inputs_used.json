@@ -1,0 +1,293 @@
+{
+  "inputs": [
+    {
+      "case_id": "HOLD01",
+      "declaration": {
+        "doc_id": "HOLD01_DECL",
+        "lines": [
+          {
+            "line_id": "L1",
+            "text": "本人财富来源为投资基金赎回。"
+          },
+          {
+            "line_id": "L2",
+            "text": "该基金赎回总额为 USD 1,250,000，其中本金 USD 1,000,000、已实现收益 USD 250,000。"
+          },
+          {
+            "line_id": "L3",
+            "text": "赎回款项已于 2024-05-10 到账，交易状态为 completed。"
+          },
+          {
+            "line_id": "L4",
+            "text": "客户编号：SYN-HOLD01；交易编号：TX-HOLD01。"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "doc_id": "HOLD01_DOC1",
+          "doc_type": "fund_redemption_statement",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "产品名称：星河平衡基金。"
+            },
+            {
+              "line_id": "L2",
+              "text": "赎回总额：USD 1,250,000。"
+            },
+            {
+              "line_id": "L3",
+              "text": "本金部分：USD 1,000,000；已实现收益：USD 250,000。"
+            },
+            {
+              "line_id": "L4",
+              "text": "结算状态：completed；到账日期：2024-05-10。"
+            },
+            {
+              "line_id": "L5",
+              "text": "付款账户：虚构银行账户尾号 8899；币种：USD。"
+            },
+            {
+              "line_id": "L6",
+              "text": "本结算记录仅反映该笔基金赎回，不包含其他交易。"
+            },
+            {
+              "line_id": "L7",
+              "text": "客户编号：SYN-HOLD01；交易编号：TX-HOLD01。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD02",
+      "declaration": {
+        "doc_id": "HOLD02_DECL",
+        "lines": [
+          {
+            "line_id": "L1",
+            "text": "本人持有目标公司 40% 股权，并将全部股权转让给买方。"
+          },
+          {
+            "line_id": "L2",
+            "text": "股权转让对价为 USD 4,000,000，已于 2024-03-01 收到全部款项。"
+          },
+          {
+            "line_id": "L3",
+            "text": "交易状态为 completed。"
+          },
+          {
+            "line_id": "L4",
+            "text": "客户编号：SYN-HOLD02；交易编号：TX-HOLD02。"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "doc_id": "HOLD02_DOC1",
+          "doc_type": "share_purchase_agreement_excerpt",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "目标公司整体估值为 USD 10,000,000。"
+            },
+            {
+              "line_id": "L2",
+              "text": "转让方持有目标公司 25% 股权。"
+            },
+            {
+              "line_id": "L3",
+              "text": "转让方将全部 25% 股权转让给买方，对应转让对价为 USD 2,500,000。"
+            },
+            {
+              "line_id": "L4",
+              "text": "协议签署日期：2024-02-01。"
+            },
+            {
+              "line_id": "L5",
+              "text": "客户编号：SYN-HOLD02；交易编号：TX-HOLD02。"
+            }
+          ]
+        },
+        {
+          "doc_id": "HOLD02_DOC2",
+          "doc_type": "payment_settlement_record",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "首期股权转让款 USD 1,000,000 已于 2024-03-01 支付。"
+            },
+            {
+              "line_id": "L2",
+              "text": "剩余 USD 1,500,000 尚未支付，计划于 2024-09-01 到期。"
+            },
+            {
+              "line_id": "L3",
+              "text": "当前结算状态：pending。"
+            },
+            {
+              "line_id": "L4",
+              "text": "客户编号：SYN-HOLD02；交易编号：TX-HOLD02。"
+            },
+            {
+              "line_id": "L5",
+              "text": "本支付记录截至 2024-03-01，反映该日的付款状态。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD03",
+      "declaration": {
+        "doc_id": "HOLD03_DECL",
+        "lines": [
+          {
+            "line_id": "L1",
+            "text": "本人财富来自出售新加坡投资房产。"
+          },
+          {
+            "line_id": "L2",
+            "text": "该房产由本人持有用于投资，出售后不再持有。"
+          },
+          {
+            "line_id": "L3",
+            "text": "房产出售净所得为 USD 1,200,000。"
+          },
+          {
+            "line_id": "L4",
+            "text": "交易已完成，款项已收妥。"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "doc_id": "HOLD03_DOC1",
+          "doc_type": "property_sale_settlement_statement",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "物业地址：新加坡某公寓。"
+            },
+            {
+              "line_id": "L2",
+              "text": "成交价：SGD 2,000,000。"
+            },
+            {
+              "line_id": "L3",
+              "text": "未偿抵押贷款：SGD 500,000。"
+            },
+            {
+              "line_id": "L4",
+              "text": "出售净所得：SGD 1,500,000。"
+            },
+            {
+              "line_id": "L5",
+              "text": "结算状态：completed；结算日期：2024-04-20。"
+            },
+            {
+              "line_id": "L6",
+              "text": "买方已支付全部成交价，无其他费用调整。"
+            },
+            {
+              "line_id": "L7",
+              "text": "本结算单币种为 SGD。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD04",
+      "declaration": {
+        "doc_id": "HOLD04_DECL",
+        "lines": [
+          {
+            "line_id": "L1",
+            "text": "本人财富来自出售所持某公司股权。"
+          },
+          {
+            "line_id": "L2",
+            "text": "股权转让所得为 USD 750,000，交易状态为 completed。"
+          },
+          {
+            "line_id": "L3",
+            "text": "相关结算文件已由交易双方确认。"
+          },
+          {
+            "line_id": "L4",
+            "text": "客户编号：SYN-HOLD04；交易编号：TX-HOLD04。"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "doc_id": "HOLD04_DOC1",
+          "doc_type": "equity_transfer_settlement_statement_A",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "Settlement Statement A for the equity transfer."
+            },
+            {
+              "line_id": "L2",
+              "text": "Seller's transfer proceeds: USD 750,000."
+            },
+            {
+              "line_id": "L3",
+              "text": "Transaction status: completed."
+            },
+            {
+              "line_id": "L4",
+              "text": "Statement date: 2024-06-15."
+            },
+            {
+              "line_id": "L5",
+              "text": "客户编号：SYN-HOLD04；交易编号：TX-HOLD04。"
+            }
+          ]
+        },
+        {
+          "doc_id": "HOLD04_DOC2",
+          "doc_type": "equity_transfer_settlement_statement_B",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "Settlement Statement B for the same equity transfer."
+            },
+            {
+              "line_id": "L2",
+              "text": "Seller's transfer proceeds: USD 720,000."
+            },
+            {
+              "line_id": "L3",
+              "text": "Transaction status: completed."
+            },
+            {
+              "line_id": "L4",
+              "text": "Statement date: 2024-06-15."
+            },
+            {
+              "line_id": "L5",
+              "text": "客户编号：SYN-HOLD04；交易编号：TX-HOLD04。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD05",
+      "declaration": {
+        "doc_id": "HOLD05_DECL",
+        "lines": [
+          {
+            "line_id": "L1",
+            "text": ""
+          }
+        ]
+      },
+      "documents": []
+    }
+  ]
+}

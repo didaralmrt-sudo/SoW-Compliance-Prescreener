@@ -1,0 +1,177 @@
+{
+  "case_id": "DEV06",
+  "pipeline_version": "keyword_money_v1",
+  "status": "rule_output",
+  "candidate_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "equity_sale",
+        "amount": 12000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_agreed_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "equity_sale",
+        "amount": 12000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 3000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 9000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV06_DECL",
+        "line_id": "L3",
+        "quote": "本次交易价为SGD 12,000,000，我将这笔金额申报为本人出售股权已经收到的所得。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L1",
+        "quote": "遥峰材料有限公司联合出售于2025年7月22日完成交割，买方受让公司总股本的60%，整体交易对价为SGD 12,000,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L1",
+        "quote": "遥峰材料有限公司联合出售于2025年7月22日完成交割，买方受让公司总股本的60%，整体交易对价为SGD 12,000,000。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[2].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[2].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validated_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "equity_sale",
+        "amount": 12000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_agreed_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "equity_sale",
+        "amount": 12000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 3000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 9000000.0,
+        "currency": "SGD",
+        "amount_basis": "equity_paid_proceeds",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV06_DECL",
+        "line_id": "L3",
+        "quote": "本次交易价为SGD 12,000,000，我将这笔金额申报为本人出售股权已经收到的所得。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L1",
+        "quote": "遥峰材料有限公司联合出售于2025年7月22日完成交割，买方受让公司总股本的60%，整体交易对价为SGD 12,000,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L1",
+        "quote": "遥峰材料有限公司联合出售于2025年7月22日完成交割，买方受让公司总股本的60%，整体交易对价为SGD 12,000,000。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[2].amount"
+      },
+      {
+        "doc_id": "DEV06_DOC1",
+        "line_id": "L4",
+        "quote": "结算支付记录确认，韩知序应得并已到账SGD 3,000,000，其余卖方合计已到账SGD 9,000,000，全部支付完成。",
+        "supports_field": "supported_facts[2].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "latency_seconds": 0.0007517029999917213,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cost": 0
+  },
+  "cost_note": "No model API; CPU/runtime cost not estimated."
+}

@@ -1,0 +1,2 @@
+# Core modules use only the Python standard library. Use Python 3.10 or newer.
+# Google Colab supplies google.colab and IPython for the submission notebook.

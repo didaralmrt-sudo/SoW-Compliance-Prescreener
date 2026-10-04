@@ -1,0 +1,189 @@
+{
+  "case_id": "DEV08",
+  "requested_model": "openai/gpt-4o-mini",
+  "pipeline_version": "v4_1_evidence_binding",
+  "response_format": "json_schema_strict",
+  "run_id": "20261004T071420198216Z",
+  "request_fingerprint": "3b1d2ae2fa818a8cbe23cd6ab86bda2f48e948e8d410e6884c20807023ec3b3d",
+  "input_sha256": "6f51b6cdc8987056cd386d949cba5066a312bc11758f75d1fbb61e071cdc4bf9",
+  "cache_reused": false,
+  "new_api_call": true,
+  "latency_seconds": 2.3343411939999896,
+  "prompt_sha256": "8e97f1784dd5a57699f8fc5bf1622ae673ee6336730284fe875aa407214aea6a",
+  "provider_response": {
+    "id": "gen-1791098076-GoHyH8obR2jrRidkamGI",
+    "object": "chat.completion",
+    "created": 1791098076,
+    "model": "openai/gpt-4o-mini",
+    "provider": "Azure",
+    "system_fingerprint": "fp_99f88af1c5",
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"source_type\":\"unknown\",\"claims\":[{\"source_label\":\"雾岑科技有限公司\",\"amount\":1200000,\"currency\":\"SGD\",\"amount_basis\":\"investment_dividend\",\"amount_evidence\":[{\"doc_id\":\"DEV08_DECL\",\"line_id\":\"L1\"}]}],\"supported_facts\":[],\"review_action\":\"insufficient_input\",\"issue_codes\":[\"insufficient_information\"],\"evidence\":[],\"calculations\":[],\"missing_information\":[\"分红决议\",\"支付凭证\",\"账户入账记录\"]}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2094,
+      "completion_tokens": 103,
+      "total_tokens": 2197,
+      "cost": 0.0002319,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002319,
+        "upstream_inference_prompt_cost": 0.0001701,
+        "upstream_inference_completions_cost": 6.18e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2094,
+    "completion_tokens": 103,
+    "total_tokens": 2197,
+    "cost": 0.0002319,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0002319,
+      "upstream_inference_prompt_cost": 0.0001701,
+      "upstream_inference_completions_cost": 6.18e-05
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "actual_model": "openai/gpt-4o-mini",
+  "finish_reason": "stop",
+  "raw_output": "{\"source_type\":\"unknown\",\"claims\":[{\"source_label\":\"雾岑科技有限公司\",\"amount\":1200000,\"currency\":\"SGD\",\"amount_basis\":\"investment_dividend\",\"amount_evidence\":[{\"doc_id\":\"DEV08_DECL\",\"line_id\":\"L1\"}]}],\"supported_facts\":[],\"review_action\":\"insufficient_input\",\"issue_codes\":[\"insufficient_information\"],\"evidence\":[],\"calculations\":[],\"missing_information\":[\"分红决议\",\"支付凭证\",\"账户入账记录\"]}",
+  "raw_model_object": {
+    "source_type": "unknown",
+    "claims": [
+      {
+        "source_label": "雾岑科技有限公司",
+        "amount": 1200000,
+        "currency": "SGD",
+        "amount_basis": "investment_dividend",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV08_DECL",
+            "line_id": "L1"
+          }
+        ]
+      }
+    ],
+    "supported_facts": [],
+    "review_action": "insufficient_input",
+    "issue_codes": [
+      "insufficient_information"
+    ],
+    "evidence": [],
+    "calculations": [],
+    "missing_information": [
+      "分红决议",
+      "支付凭证",
+      "账户入账记录"
+    ]
+  },
+  "candidate_output": {
+    "source_type": "unknown",
+    "claims": [
+      {
+        "source_label": "雾岑科技有限公司",
+        "amount": 1200000,
+        "currency": "SGD",
+        "amount_basis": "investment_dividend"
+      }
+    ],
+    "supported_facts": [],
+    "review_action": "insufficient_input",
+    "issue_codes": [
+      "insufficient_information"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV08_DECL",
+        "line_id": "L1",
+        "quote": "我叫唐砚，本次申报SGD 1,200,000，来源是本人持有雾岑科技有限公司股权所获得的现金分红。",
+        "supports_field": "claims[0].amount"
+      }
+    ],
+    "calculations": [],
+    "missing_information": [
+      "分红决议",
+      "支付凭证",
+      "账户入账记录"
+    ]
+  },
+  "evidence_binding": "Source text and field paths attached deterministically; raw_model_object unchanged",
+  "validated_output": {
+    "source_type": "unknown",
+    "claims": [
+      {
+        "source_label": "雾岑科技有限公司",
+        "amount": 1200000,
+        "currency": "SGD",
+        "amount_basis": "investment_dividend"
+      }
+    ],
+    "supported_facts": [],
+    "review_action": "human_review",
+    "issue_codes": [
+      "insufficient_information",
+      "missing_evidence"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV08_DECL",
+        "line_id": "L1",
+        "quote": "我叫唐砚，本次申报SGD 1,200,000，来源是本人持有雾岑科技有限公司股权所获得的现金分红。",
+        "supports_field": "claims[0].amount"
+      }
+    ],
+    "calculations": [],
+    "missing_information": [
+      "分红决议",
+      "支付凭证",
+      "账户入账记录"
+    ]
+  },
+  "validation": {
+    "schema_ok": true,
+    "mechanical_checks_ok": true,
+    "errors": [],
+    "arithmetic_checks": [],
+    "normalization_events": [],
+    "comparison_candidates": [],
+    "injection_rule_evidence": [],
+    "forced_review": true,
+    "amount_matching_scope": "Only evidenced matching label/basis/currency pairs are numerical candidates. Differences trigger review but do not create confirmed mismatch labels. Period, ownership and semantic support require review.",
+    "limitations": "Verbatim quote presence and arithmetic do not prove semantic support. Human checks remain necessary; injection detector covers only listed patterns."
+  },
+  "status": "ok"
+}

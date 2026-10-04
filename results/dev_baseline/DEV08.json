@@ -1,0 +1,69 @@
+{
+  "case_id": "DEV08",
+  "pipeline_version": "keyword_money_v1",
+  "status": "rule_output",
+  "candidate_output": {
+    "source_type": "investment",
+    "claims": [
+      {
+        "source_label": "investment",
+        "amount": 1200000.0,
+        "currency": "SGD",
+        "amount_basis": "redemption_total"
+      }
+    ],
+    "supported_facts": [],
+    "review_action": "human_review",
+    "issue_codes": [
+      "missing_evidence"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV08_DECL",
+        "line_id": "L1",
+        "quote": "我叫唐砚，本次申报SGD 1,200,000，来源是本人持有雾岑科技有限公司股权所获得的现金分红。",
+        "supports_field": "claims[0].amount"
+      }
+    ],
+    "calculations": [],
+    "missing_information": [
+      "No supporting documents supplied."
+    ]
+  },
+  "validated_output": {
+    "source_type": "investment",
+    "claims": [
+      {
+        "source_label": "investment",
+        "amount": 1200000.0,
+        "currency": "SGD",
+        "amount_basis": "redemption_total"
+      }
+    ],
+    "supported_facts": [],
+    "review_action": "human_review",
+    "issue_codes": [
+      "missing_evidence"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV08_DECL",
+        "line_id": "L1",
+        "quote": "我叫唐砚，本次申报SGD 1,200,000，来源是本人持有雾岑科技有限公司股权所获得的现金分红。",
+        "supports_field": "claims[0].amount"
+      }
+    ],
+    "calculations": [],
+    "missing_information": [
+      "No supporting documents supplied."
+    ]
+  },
+  "latency_seconds": 0.0003894730000411073,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cost": 0
+  },
+  "cost_note": "No model API; CPU/runtime cost not estimated."
+}

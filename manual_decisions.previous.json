@@ -1,0 +1,134 @@
+{
+  "dev": {
+    "baseline": {
+      "DEV01": {
+        "overall": "FAIL",
+        "reason": "缺少固定要求的股权比例计算；另将公司整体估值8000000标为股权约定对价，未清楚区分金额主体。"
+      },
+      "DEV02": {
+        "overall": "FAIL",
+        "reason": "990000累计金额正确，但收款状态为unknown而非completed；未保留2022–2024累计期间，各年金额与合计口径也未区分。"
+      },
+      "DEV03": {
+        "overall": "FAIL",
+        "reason": "额外把1000000本金标为investment_net_gain，产生不正确的收益事实；不是仅因事实数组顺序不同而失败。"
+      },
+      "DEV04": {
+        "overall": "PASS",
+        "reason": "2400000 HKD个人现金继承、完成到账及正常行动正确；分配安排的unknown与到账记录completed分别对应不同证据阶段。"
+      },
+      "DEV05": {
+        "overall": "FAIL",
+        "reason": "把单一赠与分成mixed，声明口径unspecified；未报告必需amount_mismatch及150000差额。"
+      },
+      "DEV06": {
+        "overall": "FAIL",
+        "reason": "把客户声称已收的12000000标为约定对价，输出no_issue_detected；漏掉个人3000000与整体12000000的区别、两个必需问题码及比例计算。"
+      },
+      "DEV07": {
+        "overall": "FAIL",
+        "reason": "虽正确触发transaction_not_completed，但将客户已收款声明标为equity_agreed_proceeds，改变了声明的金融含义。"
+      },
+      "DEV08": {
+        "overall": "FAIL",
+        "reason": "缺文件、投资类型及转人工正确，但将现金分红错误标成redemption_total，金额口径不符合原文。"
+      },
+      "DEV09": {
+        "overall": "FAIL",
+        "reason": "把240000 SGD薪资合计标成基金赎回，并将累计工资与年度工资比较，误报amount_mismatch、误转人工。"
+      },
+      "DEV10": {
+        "overall": "FAIL",
+        "reason": "将注入行920000纳入财务支持事实，漏掉amount_mismatch，source_type错为mixed，且没有50000差额计算。"
+      }
+    },
+    "ai": {
+      "DEV01": {
+        "overall": "FAIL",
+        "reason": "正常案例被转人工，且缺少8000000×25%=2000000的必需股权分配计算。"
+      },
+      "DEV02": {
+        "overall": "PASS",
+        "reason": "990000 SGD、2022–2024税后累计薪资口径、completed及正常行动正确，引用能追溯到工资汇总和到账记录。"
+      },
+      "DEV03": {
+        "overall": "PASS",
+        "reason": "正确区分180000净收益、1000000本金和1180000赎回总额，币种与正常行动正确；结合已引用DOC1 L3/L4可核验本金返还与收益到账。"
+      },
+      "DEV04": {
+        "overall": "PASS",
+        "reason": "2400000 HKD个人继承份额、completed和正常行动正确，引用分配及到账记录。"
+      },
+      "DEV05": {
+        "overall": "PASS",
+        "reason": "赠与类型、800000声明与650000实收、completed、amount_mismatch及150000差额正确；输出已引用DOC1 L3证明到账，单独status字段引用L1不够精确，另记引用绑定缺陷。"
+      },
+      "DEV06": {
+        "overall": "FAIL",
+        "reason": "金额差异9000000已识别，但缺ownership_proceeds_mismatch以及12000000×(15%/60%)=3000000的必需比例计算。"
+      },
+      "DEV07": {
+        "overall": "PASS",
+        "reason": "保留已收款声明与待付款约定对价的区别，pending、transaction_not_completed及人工复核正确；issue引用DOC1 L4明确未付款。固定规则允许省略独立0收款事实；附加amount_mismatch按已收声明与明确未收款理解。"
+      },
+      "DEV08": {
+        "overall": "FAIL",
+        "reason": "声明明确是现金分红，source_type却为unknown；虽缺材料处理正确，仍未满足investment类型要求。"
+      },
+      "DEV09": {
+        "overall": "FAIL",
+        "reason": "两项金额币种及正常行动正确，但把基金赎回标成equity_paid_proceeds；金额口径是必需的语义判断，不能仅凭数字一致通过。"
+      },
+      "DEV10": {
+        "overall": "PASS",
+        "reason": "保留920000声明与870000实收，计算50000差额；同时报告amount_mismatch和prompt_injection，注入只作为问题证据。"
+      }
+    }
+  },
+  "holdout": {
+    "baseline": {
+      "HOLD01": {
+        "overall": "PENDING",
+        "reason": ""
+      },
+      "HOLD02": {
+        "overall": "PENDING",
+        "reason": ""
+      },
+      "HOLD03": {
+        "overall": "PENDING",
+        "reason": ""
+      },
+      "HOLD04": {
+        "overall": "PENDING",
+        "reason": ""
+      },
+      "HOLD05": {
+        "overall": "PENDING",
+        "reason": ""
+      }
+    },
+    "ai": {
+      "HOLD01": {
+        "overall": "PENDING",
+        "reason": ""
+      },
+      "HOLD02": {
+        "overall": "PENDING",
+        "reason": ""
+      },
+      "HOLD03": {
+        "overall": "PENDING",
+        "reason": ""
+      },
+      "HOLD04": {
+        "overall": "PENDING",
+        "reason": ""
+      },
+      "HOLD05": {
+        "overall": "PENDING",
+        "reason": ""
+      }
+    }
+  }
+}

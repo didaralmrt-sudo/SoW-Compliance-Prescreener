@@ -1,0 +1,37 @@
+{
+  "case_id": "HOLD05",
+  "pipeline_version": "keyword_money_v1",
+  "status": "rule_output",
+  "candidate_output": {
+    "source_type": "unknown",
+    "claims": [],
+    "supported_facts": [],
+    "review_action": "insufficient_input",
+    "issue_codes": [
+      "insufficient_information"
+    ],
+    "evidence": [],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validated_output": {
+    "source_type": "unknown",
+    "claims": [],
+    "supported_facts": [],
+    "review_action": "insufficient_input",
+    "issue_codes": [
+      "insufficient_information"
+    ],
+    "evidence": [],
+    "calculations": [],
+    "missing_information": []
+  },
+  "latency_seconds": 8.315500008393428e-05,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cost": 0
+  },
+  "cost_note": "No model API; CPU/runtime cost not estimated."
+}

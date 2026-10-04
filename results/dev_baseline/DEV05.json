@@ -1,0 +1,159 @@
+{
+  "case_id": "DEV05",
+  "pipeline_version": "keyword_money_v1",
+  "status": "rule_output",
+  "candidate_output": {
+    "source_type": "mixed",
+    "claims": [
+      {
+        "source_label": "unknown",
+        "amount": 800000.0,
+        "currency": "USD",
+        "amount_basis": "unspecified"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "gift",
+        "amount": 650000.0,
+        "currency": "USD",
+        "amount_basis": "gift_cash",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "gift",
+        "amount": 650000.0,
+        "currency": "USD",
+        "amount_basis": "gift_cash",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "insufficient_information"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV05_DECL",
+        "line_id": "L2",
+        "quote": "我于2025年4月8日收到USD 800,000，赠与没有还款义务，款项已进入本人账户。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV05_DOC1",
+        "line_id": "L2",
+        "quote": "本次赠与约定金额为USD 650,000，赠与无偿且无需返还，不附借款或代持安排。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV05_DOC1",
+        "line_id": "L2",
+        "quote": "本次赠与约定金额为USD 650,000，赠与无偿且无需返还，不附借款或代持安排。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV05_DOC1",
+        "line_id": "L3",
+        "quote": "配套收款账户记录确认，沈予安于2025年4月8日实际收到USD 650,000，款项已全额到账。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV05_DOC1",
+        "line_id": "L3",
+        "quote": "配套收款账户记录确认，沈予安于2025年4月8日实际收到USD 650,000，款项已全额到账。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "DEV05_DECL",
+        "line_id": "L2",
+        "quote": "我于2025年4月8日收到USD 800,000，赠与没有还款义务，款项已进入本人账户。",
+        "supports_field": "issue_codes"
+      }
+    ],
+    "calculations": [],
+    "missing_information": [
+      "No amount matched under the baseline keyword/category/currency/basis rules."
+    ]
+  },
+  "validated_output": {
+    "source_type": "mixed",
+    "claims": [
+      {
+        "source_label": "unknown",
+        "amount": 800000.0,
+        "currency": "USD",
+        "amount_basis": "unspecified"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "gift",
+        "amount": 650000.0,
+        "currency": "USD",
+        "amount_basis": "gift_cash",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "gift",
+        "amount": 650000.0,
+        "currency": "USD",
+        "amount_basis": "gift_cash",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "insufficient_information"
+    ],
+    "evidence": [
+      {
+        "doc_id": "DEV05_DECL",
+        "line_id": "L2",
+        "quote": "我于2025年4月8日收到USD 800,000，赠与没有还款义务，款项已进入本人账户。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV05_DOC1",
+        "line_id": "L2",
+        "quote": "本次赠与约定金额为USD 650,000，赠与无偿且无需返还，不附借款或代持安排。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV05_DOC1",
+        "line_id": "L2",
+        "quote": "本次赠与约定金额为USD 650,000，赠与无偿且无需返还，不附借款或代持安排。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "DEV05_DOC1",
+        "line_id": "L3",
+        "quote": "配套收款账户记录确认，沈予安于2025年4月8日实际收到USD 650,000，款项已全额到账。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "DEV05_DOC1",
+        "line_id": "L3",
+        "quote": "配套收款账户记录确认，沈予安于2025年4月8日实际收到USD 650,000，款项已全额到账。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "DEV05_DECL",
+        "line_id": "L2",
+        "quote": "我于2025年4月8日收到USD 800,000，赠与没有还款义务，款项已进入本人账户。",
+        "supports_field": "issue_codes"
+      }
+    ],
+    "calculations": [],
+    "missing_information": [
+      "No amount matched under the baseline keyword/category/currency/basis rules."
+    ]
+  },
+  "latency_seconds": 0.0006535790000157249,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cost": 0
+  },
+  "cost_note": "No model API; CPU/runtime cost not estimated."
+}

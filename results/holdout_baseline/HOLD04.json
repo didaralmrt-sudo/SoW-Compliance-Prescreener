@@ -1,0 +1,139 @@
+{
+  "case_id": "HOLD04",
+  "pipeline_version": "keyword_money_v1",
+  "status": "rule_output",
+  "candidate_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "equity_sale",
+        "amount": 750000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "equity_sale",
+        "amount": 750000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 720000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "HOLD04_DECL",
+        "line_id": "L2",
+        "quote": "股权转让所得为 USD 750,000，交易状态为 completed。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "HOLD04_DOC1",
+        "line_id": "L2",
+        "quote": "Seller's transfer proceeds: USD 750,000.",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "HOLD04_DOC1",
+        "line_id": "L2",
+        "quote": "Seller's transfer proceeds: USD 750,000.",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "HOLD04_DOC2",
+        "line_id": "L2",
+        "quote": "Seller's transfer proceeds: USD 720,000.",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "HOLD04_DOC2",
+        "line_id": "L2",
+        "quote": "Seller's transfer proceeds: USD 720,000.",
+        "supports_field": "supported_facts[1].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validated_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "equity_sale",
+        "amount": 750000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "equity_sale",
+        "amount": 750000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 720000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "HOLD04_DECL",
+        "line_id": "L2",
+        "quote": "股权转让所得为 USD 750,000，交易状态为 completed。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "HOLD04_DOC1",
+        "line_id": "L2",
+        "quote": "Seller's transfer proceeds: USD 750,000.",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "HOLD04_DOC1",
+        "line_id": "L2",
+        "quote": "Seller's transfer proceeds: USD 750,000.",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "HOLD04_DOC2",
+        "line_id": "L2",
+        "quote": "Seller's transfer proceeds: USD 720,000.",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "HOLD04_DOC2",
+        "line_id": "L2",
+        "quote": "Seller's transfer proceeds: USD 720,000.",
+        "supports_field": "supported_facts[1].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "latency_seconds": 0.0006305970000539673,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cost": 0
+  },
+  "cost_note": "No model API; CPU/runtime cost not estimated."
+}

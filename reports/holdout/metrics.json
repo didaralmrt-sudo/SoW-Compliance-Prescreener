@@ -1,0 +1,379 @@
+{
+  "split": "holdout",
+  "summary": {
+    "baseline": {
+      "cases": 5,
+      "action_matches": 3,
+      "source_type_matches": 4,
+      "issue_set_matches": 1,
+      "reference_integrity_passes": 5,
+      "review_required": 3,
+      "required_cases_referred": 2,
+      "normal_cases": 1,
+      "normal_cases_referred": 1,
+      "api_cost_usd": 0.0,
+      "cost_missing_cases": 0,
+      "mean_latency_seconds": 0.0005408916000760655,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "human_decisions_completed": 5,
+      "full_task_pass_count": 1,
+      "full_task_accuracy": 0.2
+    },
+    "ai": {
+      "cases": 5,
+      "action_matches": 5,
+      "source_type_matches": 4,
+      "issue_set_matches": 2,
+      "reference_integrity_passes": 4,
+      "review_required": 3,
+      "required_cases_referred": 3,
+      "normal_cases": 1,
+      "normal_cases_referred": 0,
+      "api_cost_usd": 0.0023028,
+      "cost_missing_cases": 0,
+      "mean_latency_seconds": 4.264225390000047,
+      "prompt_tokens": 11384,
+      "completion_tokens": 1712,
+      "human_decisions_completed": 5,
+      "full_task_pass_count": 2,
+      "full_task_accuracy": 0.4
+    }
+  },
+  "cases": [
+    {
+      "split": "holdout",
+      "system": "baseline",
+      "case_id": "HOLD01",
+      "record_status": "rule_output",
+      "expected_action": "no_issue_detected",
+      "action": "human_review",
+      "action_match": false,
+      "source_type_match": true,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 9,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "把声明的1250000赎回总额提取成250000并标为本金，误报amount_mismatch及转人工；缺少正确的completed状态。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.0007397480001145595,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "holdout",
+      "system": "baseline",
+      "case_id": "HOLD02",
+      "record_status": "rule_output",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 11,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "未区分公司估值、合同对价、已付及未付余额，付款状态均unknown；遗漏ownership_proceeds_mismatch和transaction_not_completed。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.000724808000086341,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "holdout",
+      "system": "baseline",
+      "case_id": "HOLD03",
+      "record_status": "rule_output",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": false,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 8,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "投资房产错分unknown，未保留净所得口径及completed；漏掉必需currency_not_comparable，只给出泛化的insufficient_information。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.0005261500000415253,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "holdout",
+      "system": "baseline",
+      "case_id": "HOLD04",
+      "record_status": "rule_output",
+      "expected_action": "human_review",
+      "action": "no_issue_detected",
+      "action_match": false,
+      "source_type_match": true,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 5,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "两份同一交易结算金额750000与720000冲突，却输出no_issue_detected；遗漏conflicting_documents，付款状态错误为unknown。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 0.0006305970000539673,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "holdout",
+      "system": "baseline",
+      "case_id": "HOLD05",
+      "record_status": "rule_output",
+      "expected_action": "insufficient_input",
+      "action": "insufficient_input",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 0,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "PASS",
+      "manual_reason": "空输入正确输出unknown、insufficient_input和insufficient_information；事实、证据、计算均为空，未编造信息。",
+      "api_cost_usd": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "latency_seconds": 8.315500008393428e-05,
+      "cache_reused": false,
+      "pipeline_version": "keyword_money_v1",
+      "pipeline_errors": []
+    },
+    {
+      "split": "holdout",
+      "system": "ai",
+      "case_id": "HOLD01",
+      "record_status": "ok",
+      "expected_action": "no_issue_detected",
+      "action": "no_issue_detected",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 9,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "PASS",
+      "manual_reason": "正确保留1250000 USD赎回总额及本金1000000、收益250000，口径、completed、正常行动及证据正确；固定规则未把额外加法算式列为必需项。",
+      "api_cost_usd": 0.00058125,
+      "prompt_tokens": 2327,
+      "completion_tokens": 387,
+      "latency_seconds": 5.074186777000023,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": []
+    },
+    {
+      "split": "holdout",
+      "system": "ai",
+      "case_id": "HOLD02",
+      "record_status": "validation_failed",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 10,
+        "invalid_entries": [],
+        "missing_targets": [
+          "supported_facts[0].transaction_status",
+          "supported_facts[1].transaction_status",
+          "supported_facts[2].transaction_status",
+          "supported_facts[3].transaction_status"
+        ],
+        "reference_integrity_ok": false,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "虽识别金额差异与未付余额，仍遗漏必需ownership_proceeds_mismatch；将合同2500000状态写成completed，不符合unknown/pending可接受范围，多个状态无引用。",
+      "api_cost_usd": 0.0006195,
+      "prompt_tokens": 2450,
+      "completion_tokens": 660,
+      "latency_seconds": 9.245806540999865,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": [
+        "supported_facts[0].transaction_status lacks document evidence",
+        "supported_facts[1].transaction_status lacks document evidence",
+        "supported_facts[2].transaction_status lacks document evidence",
+        "supported_facts[3].transaction_status lacks document evidence",
+        "claims[0].amount: no evidenced comparable personal amount; review required",
+        "Equity allocation context requires an evidenced allocation calculation"
+      ]
+    },
+    {
+      "split": "holdout",
+      "system": "ai",
+      "case_id": "HOLD03",
+      "record_status": "validation_failed",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": false,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 5,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "将投资房产误作equity_sale；漏掉currency_not_comparable，并把1200000 USD与1500000 SGD直接相减后标成USD，属于无效跨币种计算。",
+      "api_cost_usd": 0.00050415,
+      "prompt_tokens": 2269,
+      "completion_tokens": 273,
+      "latency_seconds": 2.612484110000196,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": [
+        "claims[0].amount: no evidenced comparable personal amount; review required"
+      ]
+    },
+    {
+      "split": "holdout",
+      "system": "ai",
+      "case_id": "HOLD04",
+      "record_status": "ok",
+      "expected_action": "human_review",
+      "action": "human_review",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": false,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 7,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "FAIL",
+      "manual_reason": "正确保留750000/720000两项结算事实并转人工，但仅报告amount_mismatch，遗漏必需conflicting_documents；数值差异不能替代文件冲突分类。",
+      "api_cost_usd": 0.00041655,
+      "prompt_tokens": 2361,
+      "completion_tokens": 344,
+      "latency_seconds": 3.5942247880000195,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": []
+    },
+    {
+      "split": "holdout",
+      "system": "ai",
+      "case_id": "HOLD05",
+      "record_status": "ok",
+      "expected_action": "insufficient_input",
+      "action": "insufficient_input",
+      "action_match": true,
+      "source_type_match": true,
+      "issue_set_match": true,
+      "required_numeric_coverage": {
+        "claims": true,
+        "supported_facts": true,
+        "required_calculation_values": null
+      },
+      "shared_evidence_audit": {
+        "entries": 0,
+        "invalid_entries": [],
+        "missing_targets": [],
+        "reference_integrity_ok": true,
+        "semantic_support": "requires_manual_review; exact quotations alone are insufficient"
+      },
+      "full_task_manual": "PASS",
+      "manual_reason": "空输入正确输出unknown、insufficient_input和insufficient_information，事实、证据、计算为空，并说明没有可用财富信息。",
+      "api_cost_usd": 0.00018135,
+      "prompt_tokens": 1977,
+      "completion_tokens": 48,
+      "latency_seconds": 0.7944247340001311,
+      "cache_reused": false,
+      "pipeline_version": "v4_1_evidence_binding",
+      "pipeline_errors": []
+    }
+  ]
+}

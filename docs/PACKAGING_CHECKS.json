@@ -1,0 +1,23 @@
+{
+  "frozen_files_unchanged": {
+    "sow.py": true,
+    "prompts/system.txt": true,
+    "baseline.py": true,
+    "evaluate.py": true,
+    "checks.py": true,
+    "data/dev_inputs.json": true,
+    "data/holdout_inputs.json": true,
+    "labels/dev_ground_truth.json": true,
+    "labels/holdout_ground_truth.json": true
+  },
+  "json_parse": "passed",
+  "python_and_notebook_syntax": "passed",
+  "common_secret_pattern_scan": "no matches (not an exhaustive security audit)",
+  "new_document_links": "passed",
+  "notebook_outputs": "empty",
+  "paid_demo_default": false,
+  "offline_reproduction_default": false,
+  "project_execution_performed": false,
+  "colab_end_to_end_verified": false,
+  "historical_link_notes": []
+}

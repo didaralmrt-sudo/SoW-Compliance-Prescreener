@@ -1,0 +1,230 @@
+{
+  "case_id": "DEV04",
+  "requested_model": "openai/gpt-4o-mini",
+  "pipeline_version": "v4_1_evidence_binding",
+  "response_format": "json_schema_strict",
+  "run_id": "20261004T071420198216Z",
+  "request_fingerprint": "dea7694d9582b9836fac8d6b8980b99d26b71c2267cc0a8dce8d1fd6058869bf",
+  "input_sha256": "ea5028f7608dc41c51c9544b6e081e459c82f4a9a7b760b0a97b1af057e9374d",
+  "cache_reused": false,
+  "new_api_call": true,
+  "latency_seconds": 1.7320322980000356,
+  "prompt_sha256": "8e97f1784dd5a57699f8fc5bf1622ae673ee6336730284fe875aa407214aea6a",
+  "provider_response": {
+    "id": "gen-1791098068-EflPxU7m5ScW8lMUUi3v",
+    "object": "chat.completion",
+    "created": 1791098068,
+    "model": "openai/gpt-4o-mini",
+    "provider": "OpenAI",
+    "system_fingerprint": "fp_1638fe696a",
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"source_type\":\"inheritance\",\"claims\":[{\"source_label\":\"inheritance_cash\",\"amount\":2400000,\"currency\":\"HKD\",\"amount_basis\":\"inheritance_cash\",\"amount_evidence\":[{\"doc_id\":\"DEV04_DECL\",\"line_id\":\"L2\"}]}],\"supported_facts\":[{\"source_label\":\"inheritance_cash\",\"amount\":2400000,\"currency\":\"HKD\",\"amount_basis\":\"inheritance_cash\",\"transaction_status\":\"completed\",\"amount_evidence\":[{\"doc_id\":\"DEV04_DOC1\",\"line_id\":\"L2\"}],\"status_evidence\":[{\"doc_id\":\"DEV04_DOC1\",\"line_id\":\"L3\"}]}],\"review_action\":\"no_issue_detected\",\"issue_codes\":[],\"evidence\":[],\"calculations\":[],\"missing_information\":[]}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2319,
+      "completion_tokens": 155,
+      "total_tokens": 2474,
+      "cost": 0.00029685,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029685,
+        "upstream_inference_prompt_cost": 0.00020385,
+        "upstream_inference_completions_cost": 9.3e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2319,
+    "completion_tokens": 155,
+    "total_tokens": 2474,
+    "cost": 0.00029685,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00029685,
+      "upstream_inference_prompt_cost": 0.00020385,
+      "upstream_inference_completions_cost": 9.3e-05
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "actual_model": "openai/gpt-4o-mini",
+  "finish_reason": "stop",
+  "raw_output": "{\"source_type\":\"inheritance\",\"claims\":[{\"source_label\":\"inheritance_cash\",\"amount\":2400000,\"currency\":\"HKD\",\"amount_basis\":\"inheritance_cash\",\"amount_evidence\":[{\"doc_id\":\"DEV04_DECL\",\"line_id\":\"L2\"}]}],\"supported_facts\":[{\"source_label\":\"inheritance_cash\",\"amount\":2400000,\"currency\":\"HKD\",\"amount_basis\":\"inheritance_cash\",\"transaction_status\":\"completed\",\"amount_evidence\":[{\"doc_id\":\"DEV04_DOC1\",\"line_id\":\"L2\"}],\"status_evidence\":[{\"doc_id\":\"DEV04_DOC1\",\"line_id\":\"L3\"}]}],\"review_action\":\"no_issue_detected\",\"issue_codes\":[],\"evidence\":[],\"calculations\":[],\"missing_information\":[]}",
+  "raw_model_object": {
+    "source_type": "inheritance",
+    "claims": [
+      {
+        "source_label": "inheritance_cash",
+        "amount": 2400000,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV04_DECL",
+            "line_id": "L2"
+          }
+        ]
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "inheritance_cash",
+        "amount": 2400000,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash",
+        "transaction_status": "completed",
+        "amount_evidence": [
+          {
+            "doc_id": "DEV04_DOC1",
+            "line_id": "L2"
+          }
+        ],
+        "status_evidence": [
+          {
+            "doc_id": "DEV04_DOC1",
+            "line_id": "L3"
+          }
+        ]
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [],
+    "calculations": [],
+    "missing_information": []
+  },
+  "candidate_output": {
+    "source_type": "inheritance",
+    "claims": [
+      {
+        "source_label": "inheritance_cash",
+        "amount": 2400000,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "inheritance_cash",
+        "amount": 2400000,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV04_DECL",
+        "line_id": "L2",
+        "quote": "遗产管理人分配给我的现金为HKD 2,400,000，并已于2025年2月21日存入本人账户。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L2",
+        "quote": "根据已确认的分配安排，受益人周岚获分配现金HKD 2,400,000，此金额为其个人现金份额，不是全部遗产估值。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L3",
+        "quote": "遗产专户支付流水确认，HKD 2,400,000已于2025年2月21日全额记入周岚本人账户，支付状态为完成。",
+        "supports_field": "supported_facts[0].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "evidence_binding": "Source text and field paths attached deterministically; raw_model_object unchanged",
+  "validated_output": {
+    "source_type": "inheritance",
+    "claims": [
+      {
+        "source_label": "inheritance_cash",
+        "amount": 2400000,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "inheritance_cash",
+        "amount": 2400000,
+        "currency": "HKD",
+        "amount_basis": "inheritance_cash",
+        "transaction_status": "completed"
+      }
+    ],
+    "review_action": "no_issue_detected",
+    "issue_codes": [],
+    "evidence": [
+      {
+        "doc_id": "DEV04_DECL",
+        "line_id": "L2",
+        "quote": "遗产管理人分配给我的现金为HKD 2,400,000，并已于2025年2月21日存入本人账户。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L2",
+        "quote": "根据已确认的分配安排，受益人周岚获分配现金HKD 2,400,000，此金额为其个人现金份额，不是全部遗产估值。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "DEV04_DOC1",
+        "line_id": "L3",
+        "quote": "遗产专户支付流水确认，HKD 2,400,000已于2025年2月21日全额记入周岚本人账户，支付状态为完成。",
+        "supports_field": "supported_facts[0].transaction_status"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validation": {
+    "schema_ok": true,
+    "mechanical_checks_ok": true,
+    "errors": [],
+    "arithmetic_checks": [],
+    "normalization_events": [],
+    "comparison_candidates": [],
+    "injection_rule_evidence": [],
+    "forced_review": false,
+    "amount_matching_scope": "Only evidenced matching label/basis/currency pairs are numerical candidates. Differences trigger review but do not create confirmed mismatch labels. Period, ownership and semantic support require review.",
+    "limitations": "Verbatim quote presence and arithmetic do not prove semantic support. Human checks remain necessary; injection detector covers only listed patterns."
+  },
+  "status": "ok"
+}

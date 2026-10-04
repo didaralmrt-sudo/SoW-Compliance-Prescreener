@@ -1,0 +1,17 @@
+{
+  "run_id": "20261004T071420198216Z",
+  "requested_cases": 10,
+  "cases": 10,
+  "new_api_calls": 9,
+  "reused_cases": 1,
+  "successful_mechanical_checks": 7,
+  "task_accuracy": "not_scored; mechanical checks are not task accuracy",
+  "total_reported_cost_usd": 0.0037278,
+  "new_reported_cost_usd": 0.0032175,
+  "cost_missing_cases": 0,
+  "cost_note": "Total includes original costs for reused outputs; new cost counts only this run. Do not add totals across overlapping runs.",
+  "total_reported_prompt_tokens": 23352,
+  "total_reported_completion_tokens": 2295,
+  "mean_latency_seconds": 3.397463336299995,
+  "results_dir": "/content/sow_colab_project_v4_1/results/20261004T071420198216Z"
+}

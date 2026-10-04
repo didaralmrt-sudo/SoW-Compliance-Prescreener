@@ -1,0 +1,197 @@
+{
+  "case_id": "HOLD03",
+  "pipeline_version": "keyword_money_v1",
+  "status": "rule_output",
+  "candidate_output": {
+    "source_type": "unknown",
+    "claims": [
+      {
+        "source_label": "unknown",
+        "amount": 1200000.0,
+        "currency": "USD",
+        "amount_basis": "unspecified"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "unknown",
+        "amount": 2000000.0,
+        "currency": "SGD",
+        "amount_basis": "unspecified",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "unknown",
+        "amount": 500000.0,
+        "currency": "SGD",
+        "amount_basis": "unspecified",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "unknown",
+        "amount": 1500000.0,
+        "currency": "SGD",
+        "amount_basis": "unspecified",
+        "transaction_status": "unknown"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "insufficient_information"
+    ],
+    "evidence": [
+      {
+        "doc_id": "HOLD03_DECL",
+        "line_id": "L3",
+        "quote": "房产出售净所得为 USD 1,200,000。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L2",
+        "quote": "成交价：SGD 2,000,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L2",
+        "quote": "成交价：SGD 2,000,000。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L3",
+        "quote": "未偿抵押贷款：SGD 500,000。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L3",
+        "quote": "未偿抵押贷款：SGD 500,000。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L4",
+        "quote": "出售净所得：SGD 1,500,000。",
+        "supports_field": "supported_facts[2].amount"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L4",
+        "quote": "出售净所得：SGD 1,500,000。",
+        "supports_field": "supported_facts[2].transaction_status"
+      },
+      {
+        "doc_id": "HOLD03_DECL",
+        "line_id": "L3",
+        "quote": "房产出售净所得为 USD 1,200,000。",
+        "supports_field": "issue_codes"
+      }
+    ],
+    "calculations": [],
+    "missing_information": [
+      "No amount matched under the baseline keyword/category/currency/basis rules."
+    ]
+  },
+  "validated_output": {
+    "source_type": "unknown",
+    "claims": [
+      {
+        "source_label": "unknown",
+        "amount": 1200000.0,
+        "currency": "USD",
+        "amount_basis": "unspecified"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "unknown",
+        "amount": 2000000.0,
+        "currency": "SGD",
+        "amount_basis": "unspecified",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "unknown",
+        "amount": 500000.0,
+        "currency": "SGD",
+        "amount_basis": "unspecified",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "unknown",
+        "amount": 1500000.0,
+        "currency": "SGD",
+        "amount_basis": "unspecified",
+        "transaction_status": "unknown"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "insufficient_information"
+    ],
+    "evidence": [
+      {
+        "doc_id": "HOLD03_DECL",
+        "line_id": "L3",
+        "quote": "房产出售净所得为 USD 1,200,000。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L2",
+        "quote": "成交价：SGD 2,000,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L2",
+        "quote": "成交价：SGD 2,000,000。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L3",
+        "quote": "未偿抵押贷款：SGD 500,000。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L3",
+        "quote": "未偿抵押贷款：SGD 500,000。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L4",
+        "quote": "出售净所得：SGD 1,500,000。",
+        "supports_field": "supported_facts[2].amount"
+      },
+      {
+        "doc_id": "HOLD03_DOC1",
+        "line_id": "L4",
+        "quote": "出售净所得：SGD 1,500,000。",
+        "supports_field": "supported_facts[2].transaction_status"
+      },
+      {
+        "doc_id": "HOLD03_DECL",
+        "line_id": "L3",
+        "quote": "房产出售净所得为 USD 1,200,000。",
+        "supports_field": "issue_codes"
+      }
+    ],
+    "calculations": [],
+    "missing_information": [
+      "No amount matched under the baseline keyword/category/currency/basis rules."
+    ]
+  },
+  "latency_seconds": 0.0005261500000415253,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cost": 0
+  },
+  "cost_note": "No model API; CPU/runtime cost not estimated."
+}

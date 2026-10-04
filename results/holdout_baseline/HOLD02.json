@@ -1,0 +1,243 @@
+{
+  "case_id": "HOLD02",
+  "pipeline_version": "keyword_money_v1",
+  "status": "rule_output",
+  "candidate_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "equity_sale",
+        "amount": 4000000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "equity_sale",
+        "amount": 10000000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 2500000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 1000000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 1500000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "amount_mismatch"
+    ],
+    "evidence": [
+      {
+        "doc_id": "HOLD02_DECL",
+        "line_id": "L2",
+        "quote": "股权转让对价为 USD 4,000,000，已于 2024-03-01 收到全部款项。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "HOLD02_DOC1",
+        "line_id": "L1",
+        "quote": "目标公司整体估值为 USD 10,000,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "HOLD02_DOC1",
+        "line_id": "L1",
+        "quote": "目标公司整体估值为 USD 10,000,000。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "HOLD02_DOC1",
+        "line_id": "L3",
+        "quote": "转让方将全部 25% 股权转让给买方，对应转让对价为 USD 2,500,000。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "HOLD02_DOC1",
+        "line_id": "L3",
+        "quote": "转让方将全部 25% 股权转让给买方，对应转让对价为 USD 2,500,000。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "HOLD02_DOC2",
+        "line_id": "L1",
+        "quote": "首期股权转让款 USD 1,000,000 已于 2024-03-01 支付。",
+        "supports_field": "supported_facts[2].amount"
+      },
+      {
+        "doc_id": "HOLD02_DOC2",
+        "line_id": "L1",
+        "quote": "首期股权转让款 USD 1,000,000 已于 2024-03-01 支付。",
+        "supports_field": "supported_facts[2].transaction_status"
+      },
+      {
+        "doc_id": "HOLD02_DOC2",
+        "line_id": "L2",
+        "quote": "剩余 USD 1,500,000 尚未支付，计划于 2024-09-01 到期。",
+        "supports_field": "supported_facts[3].amount"
+      },
+      {
+        "doc_id": "HOLD02_DOC2",
+        "line_id": "L2",
+        "quote": "剩余 USD 1,500,000 尚未支付，计划于 2024-09-01 到期。",
+        "supports_field": "supported_facts[3].transaction_status"
+      },
+      {
+        "doc_id": "HOLD02_DECL",
+        "line_id": "L2",
+        "quote": "股权转让对价为 USD 4,000,000，已于 2024-03-01 收到全部款项。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "HOLD02_DOC1",
+        "line_id": "L1",
+        "quote": "目标公司整体估值为 USD 10,000,000。",
+        "supports_field": "issue_codes"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "validated_output": {
+    "source_type": "equity_sale",
+    "claims": [
+      {
+        "source_label": "equity_sale",
+        "amount": 4000000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds"
+      }
+    ],
+    "supported_facts": [
+      {
+        "source_label": "equity_sale",
+        "amount": 10000000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 2500000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 1000000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      },
+      {
+        "source_label": "equity_sale",
+        "amount": 1500000.0,
+        "currency": "USD",
+        "amount_basis": "equity_agreed_proceeds",
+        "transaction_status": "unknown"
+      }
+    ],
+    "review_action": "human_review",
+    "issue_codes": [
+      "amount_mismatch"
+    ],
+    "evidence": [
+      {
+        "doc_id": "HOLD02_DECL",
+        "line_id": "L2",
+        "quote": "股权转让对价为 USD 4,000,000，已于 2024-03-01 收到全部款项。",
+        "supports_field": "claims[0].amount"
+      },
+      {
+        "doc_id": "HOLD02_DOC1",
+        "line_id": "L1",
+        "quote": "目标公司整体估值为 USD 10,000,000。",
+        "supports_field": "supported_facts[0].amount"
+      },
+      {
+        "doc_id": "HOLD02_DOC1",
+        "line_id": "L1",
+        "quote": "目标公司整体估值为 USD 10,000,000。",
+        "supports_field": "supported_facts[0].transaction_status"
+      },
+      {
+        "doc_id": "HOLD02_DOC1",
+        "line_id": "L3",
+        "quote": "转让方将全部 25% 股权转让给买方，对应转让对价为 USD 2,500,000。",
+        "supports_field": "supported_facts[1].amount"
+      },
+      {
+        "doc_id": "HOLD02_DOC1",
+        "line_id": "L3",
+        "quote": "转让方将全部 25% 股权转让给买方，对应转让对价为 USD 2,500,000。",
+        "supports_field": "supported_facts[1].transaction_status"
+      },
+      {
+        "doc_id": "HOLD02_DOC2",
+        "line_id": "L1",
+        "quote": "首期股权转让款 USD 1,000,000 已于 2024-03-01 支付。",
+        "supports_field": "supported_facts[2].amount"
+      },
+      {
+        "doc_id": "HOLD02_DOC2",
+        "line_id": "L1",
+        "quote": "首期股权转让款 USD 1,000,000 已于 2024-03-01 支付。",
+        "supports_field": "supported_facts[2].transaction_status"
+      },
+      {
+        "doc_id": "HOLD02_DOC2",
+        "line_id": "L2",
+        "quote": "剩余 USD 1,500,000 尚未支付，计划于 2024-09-01 到期。",
+        "supports_field": "supported_facts[3].amount"
+      },
+      {
+        "doc_id": "HOLD02_DOC2",
+        "line_id": "L2",
+        "quote": "剩余 USD 1,500,000 尚未支付，计划于 2024-09-01 到期。",
+        "supports_field": "supported_facts[3].transaction_status"
+      },
+      {
+        "doc_id": "HOLD02_DECL",
+        "line_id": "L2",
+        "quote": "股权转让对价为 USD 4,000,000，已于 2024-03-01 收到全部款项。",
+        "supports_field": "issue_codes"
+      },
+      {
+        "doc_id": "HOLD02_DOC1",
+        "line_id": "L1",
+        "quote": "目标公司整体估值为 USD 10,000,000。",
+        "supports_field": "issue_codes"
+      }
+    ],
+    "calculations": [],
+    "missing_information": []
+  },
+  "latency_seconds": 0.000724808000086341,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cost": 0
+  },
+  "cost_note": "No model API; CPU/runtime cost not estimated."
+}

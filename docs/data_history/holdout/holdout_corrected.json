@@ -1,0 +1,783 @@
+{
+  "dataset_metadata": {
+    "dataset_name": "sow_holdout_5",
+    "split": "holdout",
+    "synthetic": true,
+    "case_count": 5,
+    "ground_truth_status": "draft_requires_human_verification",
+    "limitations": [
+      "该数据集由另一模型独立生成的合成留出案例，仅用于测试系统逻辑与输出约束。",
+      "不代表真实外部验证、法律意见或合规批准。",
+      "所有人物、机构、交易和文件均为虚构。",
+      "ground truth 仍需人工复核，尤其是金额口径、冲突保留和缺失信息判断。"
+    ],
+    "review_status": "assistant_structural_and_content_review_completed; user_verification_pending",
+    "status_semantics": "supported_facts[].transaction_status describes the payment/event represented by that fact, not necessarily the whole transaction. Contract signature alone does not establish receipt.",
+    "scoring_mapping_semantics": "Mappings point into expected labels. Candidate facts must be aligned semantically before comparing values; candidate array order is not prescribed."
+  },
+  "inputs": [
+    {
+      "case_id": "HOLD01",
+      "declaration": {
+        "doc_id": "HOLD01_DECL",
+        "lines": [
+          {
+            "line_id": "L1",
+            "text": "本人财富来源为投资基金赎回。"
+          },
+          {
+            "line_id": "L2",
+            "text": "该基金赎回总额为 USD 1,250,000，其中本金 USD 1,000,000、已实现收益 USD 250,000。"
+          },
+          {
+            "line_id": "L3",
+            "text": "赎回款项已于 2024-05-10 到账，交易状态为 completed。"
+          },
+          {
+            "line_id": "L4",
+            "text": "客户编号：SYN-HOLD01；交易编号：TX-HOLD01。"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "doc_id": "HOLD01_DOC1",
+          "doc_type": "fund_redemption_statement",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "产品名称：星河平衡基金。"
+            },
+            {
+              "line_id": "L2",
+              "text": "赎回总额：USD 1,250,000。"
+            },
+            {
+              "line_id": "L3",
+              "text": "本金部分：USD 1,000,000；已实现收益：USD 250,000。"
+            },
+            {
+              "line_id": "L4",
+              "text": "结算状态：completed；到账日期：2024-05-10。"
+            },
+            {
+              "line_id": "L5",
+              "text": "付款账户：虚构银行账户尾号 8899；币种：USD。"
+            },
+            {
+              "line_id": "L6",
+              "text": "本结算记录仅反映该笔基金赎回，不包含其他交易。"
+            },
+            {
+              "line_id": "L7",
+              "text": "客户编号：SYN-HOLD01；交易编号：TX-HOLD01。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD02",
+      "declaration": {
+        "doc_id": "HOLD02_DECL",
+        "lines": [
+          {
+            "line_id": "L1",
+            "text": "本人持有目标公司 40% 股权，并将全部股权转让给买方。"
+          },
+          {
+            "line_id": "L2",
+            "text": "股权转让对价为 USD 4,000,000，已于 2024-03-01 收到全部款项。"
+          },
+          {
+            "line_id": "L3",
+            "text": "交易状态为 completed。"
+          },
+          {
+            "line_id": "L4",
+            "text": "客户编号：SYN-HOLD02；交易编号：TX-HOLD02。"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "doc_id": "HOLD02_DOC1",
+          "doc_type": "share_purchase_agreement_excerpt",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "目标公司整体估值为 USD 10,000,000。"
+            },
+            {
+              "line_id": "L2",
+              "text": "转让方持有目标公司 25% 股权。"
+            },
+            {
+              "line_id": "L3",
+              "text": "转让方将全部 25% 股权转让给买方，对应转让对价为 USD 2,500,000。"
+            },
+            {
+              "line_id": "L4",
+              "text": "协议签署日期：2024-02-01。"
+            },
+            {
+              "line_id": "L5",
+              "text": "客户编号：SYN-HOLD02；交易编号：TX-HOLD02。"
+            }
+          ]
+        },
+        {
+          "doc_id": "HOLD02_DOC2",
+          "doc_type": "payment_settlement_record",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "首期股权转让款 USD 1,000,000 已于 2024-03-01 支付。"
+            },
+            {
+              "line_id": "L2",
+              "text": "剩余 USD 1,500,000 尚未支付，计划于 2024-09-01 到期。"
+            },
+            {
+              "line_id": "L3",
+              "text": "当前结算状态：pending。"
+            },
+            {
+              "line_id": "L4",
+              "text": "客户编号：SYN-HOLD02；交易编号：TX-HOLD02。"
+            },
+            {
+              "line_id": "L5",
+              "text": "本支付记录截至 2024-03-01，反映该日的付款状态。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD03",
+      "declaration": {
+        "doc_id": "HOLD03_DECL",
+        "lines": [
+          {
+            "line_id": "L1",
+            "text": "本人财富来自出售新加坡投资房产。"
+          },
+          {
+            "line_id": "L2",
+            "text": "该房产由本人持有用于投资，出售后不再持有。"
+          },
+          {
+            "line_id": "L3",
+            "text": "房产出售净所得为 USD 1,200,000。"
+          },
+          {
+            "line_id": "L4",
+            "text": "交易已完成，款项已收妥。"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "doc_id": "HOLD03_DOC1",
+          "doc_type": "property_sale_settlement_statement",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "物业地址：新加坡某公寓。"
+            },
+            {
+              "line_id": "L2",
+              "text": "成交价：SGD 2,000,000。"
+            },
+            {
+              "line_id": "L3",
+              "text": "未偿抵押贷款：SGD 500,000。"
+            },
+            {
+              "line_id": "L4",
+              "text": "出售净所得：SGD 1,500,000。"
+            },
+            {
+              "line_id": "L5",
+              "text": "结算状态：completed；结算日期：2024-04-20。"
+            },
+            {
+              "line_id": "L6",
+              "text": "买方已支付全部成交价，无其他费用调整。"
+            },
+            {
+              "line_id": "L7",
+              "text": "本结算单币种为 SGD。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD04",
+      "declaration": {
+        "doc_id": "HOLD04_DECL",
+        "lines": [
+          {
+            "line_id": "L1",
+            "text": "本人财富来自出售所持某公司股权。"
+          },
+          {
+            "line_id": "L2",
+            "text": "股权转让所得为 USD 750,000，交易状态为 completed。"
+          },
+          {
+            "line_id": "L3",
+            "text": "相关结算文件已由交易双方确认。"
+          },
+          {
+            "line_id": "L4",
+            "text": "客户编号：SYN-HOLD04；交易编号：TX-HOLD04。"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "doc_id": "HOLD04_DOC1",
+          "doc_type": "equity_transfer_settlement_statement_A",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "Settlement Statement A for the equity transfer."
+            },
+            {
+              "line_id": "L2",
+              "text": "Seller's transfer proceeds: USD 750,000."
+            },
+            {
+              "line_id": "L3",
+              "text": "Transaction status: completed."
+            },
+            {
+              "line_id": "L4",
+              "text": "Statement date: 2024-06-15."
+            },
+            {
+              "line_id": "L5",
+              "text": "客户编号：SYN-HOLD04；交易编号：TX-HOLD04。"
+            }
+          ]
+        },
+        {
+          "doc_id": "HOLD04_DOC2",
+          "doc_type": "equity_transfer_settlement_statement_B",
+          "lines": [
+            {
+              "line_id": "L1",
+              "text": "Settlement Statement B for the same equity transfer."
+            },
+            {
+              "line_id": "L2",
+              "text": "Seller's transfer proceeds: USD 720,000."
+            },
+            {
+              "line_id": "L3",
+              "text": "Transaction status: completed."
+            },
+            {
+              "line_id": "L4",
+              "text": "Statement date: 2024-06-15."
+            },
+            {
+              "line_id": "L5",
+              "text": "客户编号：SYN-HOLD04；交易编号：TX-HOLD04。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "HOLD05",
+      "declaration": {
+        "doc_id": "HOLD05_DECL",
+        "lines": [
+          {
+            "line_id": "L1",
+            "text": ""
+          }
+        ]
+      },
+      "documents": []
+    }
+  ],
+  "ground_truth": [
+    {
+      "case_id": "HOLD01",
+      "category": "typical",
+      "tested_capability": "核验基金赎回总额口径：区分本金与收益但总额一致，确认已完成。",
+      "expected": {
+        "source_type": "investment",
+        "claims": [
+          {
+            "source_label": "投资基金赎回",
+            "amount": 1250000,
+            "currency": "USD",
+            "amount_basis": "赎回总额（含本金和已实现收益）"
+          }
+        ],
+        "supported_facts": [
+          {
+            "source_label": "投资基金赎回",
+            "amount": 1250000,
+            "currency": "USD",
+            "amount_basis": "赎回总额（含本金和已实现收益）",
+            "transaction_status": "completed"
+          }
+        ],
+        "review_action": "no_issue_detected",
+        "issue_codes": [],
+        "evidence": [
+          {
+            "supports_field": "claims[0].amount",
+            "doc_id": "HOLD01_DECL",
+            "line_id": "L2",
+            "quote": "该基金赎回总额为 USD 1,250,000，其中本金 USD 1,000,000、已实现收益 USD 250,000。"
+          },
+          {
+            "supports_field": "supported_facts[0].amount",
+            "doc_id": "HOLD01_DOC1",
+            "line_id": "L2",
+            "quote": "赎回总额：USD 1,250,000。"
+          },
+          {
+            "supports_field": "supported_facts.amount_basis",
+            "doc_id": "HOLD01_DOC1",
+            "line_id": "L3",
+            "quote": "本金部分：USD 1,000,000；已实现收益：USD 250,000。"
+          },
+          {
+            "supports_field": "supported_facts.transaction_status",
+            "doc_id": "HOLD01_DOC1",
+            "line_id": "L4",
+            "quote": "结算状态：completed；到账日期：2024-05-10。"
+          }
+        ],
+        "calculations": [
+          {
+            "expression": "1,000,000 + 250,000",
+            "result": 1250000,
+            "currency": "USD"
+          }
+        ],
+        "missing_information": []
+      },
+      "scoring": {
+        "must_match": {
+          "source_type": "investment",
+          "review_action": "no_issue_detected",
+          "claim_amount": 1250000,
+          "claim_currency": "USD",
+          "supported_amount": 1250000,
+          "supported_currency": "USD",
+          "supported_transaction_status": "completed"
+        },
+        "acceptable_variations": [
+          "source_label 可措辞为基金赎回、投资赎回等，但金额、币种和口径不得改变。",
+          "evidence 可选择能逐字支持金额或状态的相应行。"
+        ],
+        "must_not": [
+          "不得只输出本金 USD 1,000,000 或收益 USD 250,000 而遗漏赎回总额 USD 1,250,000 及其口径；允许另外正确列出本金和收益。",
+          "不得自行换汇、估算税费或认定合规批准。"
+        ],
+        "required_issue_codes": [],
+        "allowed_extra_issue_codes": [],
+        "issue_code_comparison": "Compare sets, ignoring order. All required codes must appear; extra codes must be in allowed_extra_issue_codes and supported by the input. For HOLD03, insufficient_information refers only to missing exchange/conversion evidence.",
+        "fact_comparison": "Match facts by source, amount basis and supporting document; do not require array order or exact source_label wording. Additional correctly evidenced facts are allowed.",
+        "field_mapping_to_expected": {
+          "claim_amount": "claims[0].amount",
+          "claim_currency": "claims[0].currency",
+          "supported_amount": "supported_facts[0].amount",
+          "supported_currency": "supported_facts[0].currency",
+          "supported_transaction_status": "supported_facts[0].transaction_status"
+        }
+      },
+      "human_verification_status": "pending"
+    },
+    {
+      "case_id": "HOLD02",
+      "category": "edge",
+      "tested_capability": "通过持股比例、合同对价和部分支付核验股权转让金额与交易状态。",
+      "expected": {
+        "source_type": "equity_sale",
+        "claims": [
+          {
+            "source_label": "股权转让",
+            "amount": 4000000,
+            "currency": "USD",
+            "amount_basis": "客户声明的全部股权转让对价"
+          }
+        ],
+        "supported_facts": [
+          {
+            "source_label": "股权转让合同",
+            "amount": 2500000,
+            "currency": "USD",
+            "amount_basis": "合同约定的25%股权转让对价",
+            "transaction_status": "unknown"
+          },
+          {
+            "source_label": "已支付部分",
+            "amount": 1000000,
+            "currency": "USD",
+            "amount_basis": "首期已支付股权转让款",
+            "transaction_status": "completed"
+          },
+          {
+            "source_label": "未支付余额",
+            "amount": 1500000,
+            "currency": "USD",
+            "amount_basis": "剩余未支付股权转让款",
+            "transaction_status": "pending"
+          }
+        ],
+        "review_action": "human_review",
+        "issue_codes": [
+          "amount_mismatch",
+          "ownership_proceeds_mismatch",
+          "transaction_not_completed"
+        ],
+        "evidence": [
+          {
+            "supports_field": "ownership_proceeds_mismatch",
+            "doc_id": "HOLD02_DOC1",
+            "line_id": "L2",
+            "quote": "转让方持有目标公司 25% 股权。"
+          },
+          {
+            "supports_field": "supported_facts.amount",
+            "doc_id": "HOLD02_DOC1",
+            "line_id": "L3",
+            "quote": "转让方将全部 25% 股权转让给买方，对应转让对价为 USD 2,500,000。"
+          },
+          {
+            "supports_field": "supported_facts.amount/transaction_status",
+            "doc_id": "HOLD02_DOC2",
+            "line_id": "L1",
+            "quote": "首期股权转让款 USD 1,000,000 已于 2024-03-01 支付。"
+          },
+          {
+            "supports_field": "supported_facts.amount",
+            "doc_id": "HOLD02_DOC2",
+            "line_id": "L2",
+            "quote": "剩余 USD 1,500,000 尚未支付，计划于 2024-09-01 到期。"
+          },
+          {
+            "supports_field": "transaction_not_completed",
+            "doc_id": "HOLD02_DOC2",
+            "line_id": "L3",
+            "quote": "当前结算状态：pending。"
+          }
+        ],
+        "calculations": [
+          {
+            "expression": "10,000,000 * 25%",
+            "result": 2500000,
+            "currency": "USD"
+          },
+          {
+            "expression": "2,500,000 - 1,000,000",
+            "result": 1500000,
+            "currency": "USD"
+          }
+        ],
+        "missing_information": [
+          "完整收款或结算证据，以证明合同对价 USD 2,500,000 已全部支付"
+        ]
+      },
+      "scoring": {
+        "must_match": {
+          "source_type": "equity_sale",
+          "review_action": "human_review",
+          "claim_amount": 4000000,
+          "claim_currency": "USD",
+          "supported_contract_amount": 2500000,
+          "supported_paid_amount": 1000000,
+          "supported_remaining_amount": 1500000,
+          "supported_contract_currency": "USD",
+          "supported_paid_currency": "USD",
+          "supported_remaining_currency": "USD",
+          "supported_paid_status": "completed",
+          "supported_remaining_status": "pending"
+        },
+        "acceptable_variations": [
+          "source_label 可措辞为合同对价、首期款、未付余额等，但金额、币种和状态不得改变。",
+          "可额外说明客户声明的 40% 持股与文件 25% 持股不一致。",
+          "合同对价这一事实的 transaction_status 可为 unknown 或 pending：前者表示合同本身不证明付款，后者综合结算记录；必须明确整笔对价未全部支付，并正确保留首期已付和余额未付状态。"
+        ],
+        "must_not": [
+          "不得忽略 25% 持股比例或把 40% 当作合同事实。",
+          "不得将签署协议视为收到全部款项。",
+          "不得自行换汇或补足剩余款项。",
+          "不得作合规批准。"
+        ],
+        "required_issue_codes": [
+          "amount_mismatch",
+          "ownership_proceeds_mismatch",
+          "transaction_not_completed"
+        ],
+        "allowed_extra_issue_codes": [],
+        "issue_code_comparison": "Compare sets, ignoring order. All required codes must appear; extra codes must be in allowed_extra_issue_codes and supported by the input. For HOLD03, insufficient_information refers only to missing exchange/conversion evidence.",
+        "fact_comparison": "Match facts by source, amount basis and supporting document; do not require array order or exact source_label wording. Additional correctly evidenced facts are allowed.",
+        "field_mapping_to_expected": {
+          "claim_amount": "claims[0].amount",
+          "claim_currency": "claims[0].currency",
+          "supported_contract_amount": "supported_facts[0].amount",
+          "supported_paid_amount": "supported_facts[1].amount",
+          "supported_remaining_amount": "supported_facts[2].amount",
+          "supported_contract_currency": "supported_facts[0].currency",
+          "supported_paid_currency": "supported_facts[1].currency",
+          "supported_remaining_currency": "supported_facts[2].currency",
+          "supported_paid_status": "supported_facts[1].transaction_status",
+          "supported_remaining_status": "supported_facts[2].transaction_status"
+        }
+      },
+      "human_verification_status": "pending"
+    },
+    {
+      "case_id": "HOLD03",
+      "category": "edge",
+      "tested_capability": "保留不同币种事实，不自行换汇；在缺少汇率或同币种记录时转人工。",
+      "expected": {
+        "source_type": "investment",
+        "claims": [
+          {
+            "source_label": "投资房产出售",
+            "amount": 1200000,
+            "currency": "USD",
+            "amount_basis": "出售净所得"
+          }
+        ],
+        "supported_facts": [
+          {
+            "source_label": "投资房产出售",
+            "amount": 1500000,
+            "currency": "SGD",
+            "amount_basis": "出售净所得",
+            "transaction_status": "completed"
+          }
+        ],
+        "review_action": "human_review",
+        "issue_codes": [
+          "currency_not_comparable"
+        ],
+        "evidence": [
+          {
+            "supports_field": "supported_facts.amount",
+            "doc_id": "HOLD03_DOC1",
+            "line_id": "L4",
+            "quote": "出售净所得：SGD 1,500,000。"
+          },
+          {
+            "supports_field": "supported_facts.transaction_status",
+            "doc_id": "HOLD03_DOC1",
+            "line_id": "L5",
+            "quote": "结算状态：completed；结算日期：2024-04-20。"
+          }
+        ],
+        "calculations": [
+          {
+            "expression": "2,000,000 - 500,000",
+            "result": 1500000,
+            "currency": "SGD"
+          }
+        ],
+        "missing_information": [
+          "USD 与 SGD 之间的汇率或同币种（USD）的收款/结算记录",
+          "客户声明 USD 1,200,000 的换算依据"
+        ]
+      },
+      "scoring": {
+        "must_match": {
+          "source_type": "investment",
+          "review_action": "human_review",
+          "claim_amount": 1200000,
+          "claim_currency": "USD",
+          "supported_amount": 1500000,
+          "supported_currency": "SGD",
+          "supported_transaction_status": "completed"
+        },
+        "acceptable_variations": [
+          "source_label 可措辞为投资房产出售、房产出售净所得等，但币种和金额不得混用。",
+          "可保留 SGD 净所得计算，但不得生成汇率。 "
+        ],
+        "must_not": [
+          "不得自行生成 USD/SGD 汇率。",
+          "不得把 SGD 金额直接当作 USD 金额。",
+          "不得直接认定客户虚假或作合规批准。"
+        ],
+        "required_issue_codes": [
+          "currency_not_comparable"
+        ],
+        "allowed_extra_issue_codes": [
+          "insufficient_information"
+        ],
+        "issue_code_comparison": "Compare sets, ignoring order. All required codes must appear; extra codes must be in allowed_extra_issue_codes and supported by the input. For HOLD03, insufficient_information refers only to missing exchange/conversion evidence.",
+        "fact_comparison": "Match facts by source, amount basis and supporting document; do not require array order or exact source_label wording. Additional correctly evidenced facts are allowed.",
+        "field_mapping_to_expected": {
+          "claim_amount": "claims[0].amount",
+          "claim_currency": "claims[0].currency",
+          "supported_amount": "supported_facts[0].amount",
+          "supported_currency": "supported_facts[0].currency",
+          "supported_transaction_status": "supported_facts[0].transaction_status"
+        }
+      },
+      "human_verification_status": "pending"
+    },
+    {
+      "case_id": "HOLD04",
+      "category": "adversarial",
+      "tested_capability": "识别同等可采文件对同一股权转让所得给出冲突金额，不任意选择其一。",
+      "expected": {
+        "source_type": "equity_sale",
+        "claims": [
+          {
+            "source_label": "股权转让",
+            "amount": 750000,
+            "currency": "USD",
+            "amount_basis": "客户声明的股权转让所得"
+          }
+        ],
+        "supported_facts": [
+          {
+            "source_label": "结算单A",
+            "amount": 750000,
+            "currency": "USD",
+            "amount_basis": "Seller's transfer proceeds",
+            "transaction_status": "completed"
+          },
+          {
+            "source_label": "结算单B",
+            "amount": 720000,
+            "currency": "USD",
+            "amount_basis": "Seller's transfer proceeds",
+            "transaction_status": "completed"
+          }
+        ],
+        "review_action": "human_review",
+        "issue_codes": [
+          "conflicting_documents"
+        ],
+        "evidence": [
+          {
+            "supports_field": "supported_facts.amount",
+            "doc_id": "HOLD04_DOC1",
+            "line_id": "L2",
+            "quote": "Seller's transfer proceeds: USD 750,000."
+          },
+          {
+            "supports_field": "supported_facts.amount",
+            "doc_id": "HOLD04_DOC2",
+            "line_id": "L2",
+            "quote": "Seller's transfer proceeds: USD 720,000."
+          },
+          {
+            "supports_field": "supported_facts.transaction_status",
+            "doc_id": "HOLD04_DOC1",
+            "line_id": "L3",
+            "quote": "Transaction status: completed."
+          },
+          {
+            "supports_field": "supported_facts.transaction_status",
+            "doc_id": "HOLD04_DOC2",
+            "line_id": "L3",
+            "quote": "Transaction status: completed."
+          }
+        ],
+        "calculations": [],
+        "missing_information": [
+          "能够说明 USD 750,000 与 USD 720,000 哪个为最终金额的更正、替代或补充依据"
+        ]
+      },
+      "scoring": {
+        "must_match": {
+          "source_type": "equity_sale",
+          "review_action": "human_review",
+          "claim_amount": 750000,
+          "claim_currency": "USD",
+          "supported_amounts": [
+            750000,
+            720000
+          ],
+          "supported_currency": "USD"
+        },
+        "acceptable_variations": [
+          "可分别保留结算单A和结算单B的金额，不得合并为单一金额。",
+          "source_label 可措辞为结算单A/B或文件A/B。",
+          "可额外标记 amount_mismatch，但不得将任一文件视为最终事实或省略 conflicting_documents。"
+        ],
+        "must_not": [
+          "不得认定结算单A或B优先。",
+          "不得只输出一个金额作为最终事实。",
+          "不得自行换汇或作合规批准。"
+        ],
+        "required_issue_codes": [
+          "conflicting_documents"
+        ],
+        "allowed_extra_issue_codes": [
+          "amount_mismatch"
+        ],
+        "issue_code_comparison": "Compare sets, ignoring order. All required codes must appear; extra codes must be in allowed_extra_issue_codes and supported by the input. For HOLD03, insufficient_information refers only to missing exchange/conversion evidence.",
+        "fact_comparison": "Match facts by source, amount basis and supporting document; do not require array order or exact source_label wording. Additional correctly evidenced facts are allowed.",
+        "field_mapping_to_expected": {
+          "claim_amount": "claims[0].amount",
+          "claim_currency": "claims[0].currency",
+          "supported_amounts": "supported_facts[*].amount (unordered set)",
+          "supported_currency": "supported_facts[*].currency (all USD)"
+        }
+      },
+      "human_verification_status": "pending"
+    },
+    {
+      "case_id": "HOLD05",
+      "category": "edge",
+      "tested_capability": "空输入处理：不编造财富来源、金额或证据。",
+      "expected": {
+        "source_type": "unknown",
+        "claims": [],
+        "supported_facts": [],
+        "review_action": "insufficient_input",
+        "issue_codes": [
+          "insufficient_information"
+        ],
+        "evidence": [],
+        "calculations": [],
+        "missing_information": [
+          "客户财富来源声明",
+          "任何证明文件或可用信息"
+        ]
+      },
+      "scoring": {
+        "must_match": {
+          "source_type": "unknown",
+          "review_action": "insufficient_input",
+          "claims": [],
+          "supported_facts": [],
+          "evidence": [],
+          "calculations": []
+        },
+        "acceptable_variations": [
+          "missing_information 可描述为缺少声明或文件，但不得生成金额或来源。"
+        ],
+        "must_not": [
+          "不得编造金额、来源、币种或证据。",
+          "不得输出 human_review 或 no_issue_detected 作为核心结论。",
+          "不得作合规批准。"
+        ],
+        "required_issue_codes": [
+          "insufficient_information"
+        ],
+        "allowed_extra_issue_codes": [],
+        "issue_code_comparison": "Compare sets, ignoring order. All required codes must appear; extra codes must be in allowed_extra_issue_codes and supported by the input. For HOLD03, insufficient_information refers only to missing exchange/conversion evidence.",
+        "fact_comparison": "Match facts by source, amount basis and supporting document; do not require array order or exact source_label wording. Additional correctly evidenced facts are allowed.",
+        "field_mapping_to_expected": {}
+      },
+      "human_verification_status": "pending"
+    }
+  ]
+}
